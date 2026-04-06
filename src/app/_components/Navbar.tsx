@@ -8,7 +8,7 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'FAQs', href: '/faqs' },
+  { label: 'FAQs', href: '/faq' },
 ];
 
 export default function Navbar() {
@@ -68,21 +68,21 @@ export default function Navbar() {
             {apiOpen && (
               <div className='absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50'>
                 <Link
-                  href='/developers/docs'
+                  href='/developer'
                   className='block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500'
                   onClick={() => setApiOpen(false)}
                 >
                   Documentation
                 </Link>
                 <Link
-                  href='/developers/api-reference'
+                  href='/developer#api-reference'
                   className='block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500'
                   onClick={() => setApiOpen(false)}
                 >
                   API Reference
                 </Link>
                 <Link
-                  href='/developers/sdks'
+                  href='/developer#sdks'
                   className='block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500'
                   onClick={() => setApiOpen(false)}
                 >
@@ -139,6 +139,13 @@ export default function Navbar() {
               </Link>
             );
           })}
+          <Link
+            href='/developer'
+            className='block px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50'
+            onClick={() => setMobileOpen(false)}
+          >
+            Developers API
+          </Link>
           <div className='border-t border-gray-100 pt-3 mt-3 flex flex-col gap-2'>
             <Link
               href='/login'
