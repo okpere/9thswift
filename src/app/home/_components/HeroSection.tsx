@@ -1,13 +1,6 @@
 import Link from 'next/link';
 import DashboardMockup from '@/app/home/_components/DashboardMockup';
 
-const trustLogos = [
-  'Logoipsum',
-  'logoipsum',
-  'Logoipsum',
-  'Logo Ipsum',
-  'Logoipsum Plus',
-];
 
 export default function HeroSection() {
   return (
@@ -79,21 +72,7 @@ export default function HeroSection() {
       </div>
 
       {/* ── Trusted by logos ── */}
-      <div className='relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center'>
-        <p className='text-gray-500 text-sm mb-8'>
-          We are trusted by 1000+ businesses
-        </p>
-        <div className='flex items-center justify-center gap-8 sm:gap-12 flex-wrap'>
-          {trustLogos.map((logo) => (
-            <div
-              key={logo}
-              className='text-gray-400 font-semibold text-sm sm:text-base tracking-tight opacity-60 hover:opacity-100 transition-opacity'
-            >
-              {logo}
-            </div>
-          ))}
-        </div>
-      </div>
+
     </main>
   );
 }

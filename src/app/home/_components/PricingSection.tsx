@@ -52,23 +52,32 @@ function formatNaira(value: number) {
 
 function formatAmount(value: string) {
   const num = Number(value.replace(/,/g, ''));
+  if (num === 0 || isNaN(num)) return '0';
   return new Intl.NumberFormat('en-NG').format(num);
 }
 
 export default function PricingSection() {
   const [mode, setMode] = useState<'customers' | 'merchants'>('customers');
   const [amountInput, setAmountInput] = useState('230000');
+  const [isEditing, setIsEditing] = useState(false);
 
   const amount = Number(amountInput.replace(/,/g, '')) || 0;
-  const displayAmount = formatAmount(amountInput);
+  const displayAmount = amount === 0 ? '' : formatAmount(amountInput);
 
   const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // Remove all non-digit characters to get raw input
     const rawValue = event.target.value.replace(/[^\d]/g, '');
     setAmountInput(rawValue);
   };
 
   const pricing = useMemo(() => {
+    if (amount === 0) {
+      return {
+        fee: 0,
+        total: 0,
+        saved: 0,
+      };
+    }
+
     const customerPays = amount;
     const chargedFee = Math.min(customerPays * feeRate, feeCap);
     const merchantGets = Math.max(customerPays - chargedFee, 0);
@@ -81,6 +90,7 @@ export default function PricingSection() {
       };
     }
 
+    // For merchants mode - calculate what customer needs to pay
     const uncappedGross = amount / (1 - feeRate);
     const grossWithCap = amount + feeCap;
     const gross = Math.min(uncappedGross, grossWithCap);
@@ -94,8 +104,8 @@ export default function PricingSection() {
   }, [amount, mode]);
 
   return (
-    <section className='bg-[radial-gradient(circle_at_top,rgba(255,144,69,0.12),transparent_28%),linear-gradient(180deg,#171513_0%,#11100f_100%)]  px-4 py-20 text-white sm:px-6 lg:px-8'>
-      <div className='mx-auto max-w-6xl  bg-[radial-gradient(circle_at_top,rgba(255,144,69,0.12),transparent_28%),linear-gradient(180deg,#171513_0%,#11100f_100%)] px-6 py-14 sm:px-8 lg:px-12'>
+    <section className='bg-[radial-gradient(circle_at_top,rgba(255,144,69,0.12),transparent_28%),linear-gradient(180deg,#171513_0%,#11100f_100%)] px-4 py-20 text-white sm:px-6 lg:px-8'>
+      <div className='mx-auto max-w-6xl  px-6 py-14  sm:px-8 lg:px-12'>
         <div className='mx-auto max-w-3xl text-center'>
           <SectionBadge label='Pricing' />
           <h2 className='mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl'>
@@ -184,17 +194,16 @@ export default function PricingSection() {
               <label htmlFor='pricing-amount' className='text-sm text-white/70'>
                 Transaction Amount
               </label>
-              <div className='mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-4 relative'>
-                <div className='text-2xl font-semibold text-white'>
-                  ₦{displayAmount}
-                </div>
+              <div className='mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-4'>
                 <input
                   id='pricing-amount'
-                  value={amountInput}
+                  value={isEditing ? amountInput : `₦${displayAmount || '0'}`}
                   onChange={handleAmountChange}
+                  onFocus={() => setIsEditing(true)}
+                  onBlur={() => setIsEditing(false)}
                   inputMode='numeric'
-                  className='absolute inset-0 w-full h-full bg-transparent text-transparent outline-none cursor-text'
-                  placeholder='230000'
+                  className='w-full bg-transparent text-2xl font-semibold text-white outline-none placeholder:text-white/30'
+                  placeholder='₦0'
                 />
               </div>
             </div>
