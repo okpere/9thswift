@@ -63,187 +63,211 @@ export default function StepsSection() {
 
         {/* Carousel Container */}
         <div className='relative mt-16'>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8'>
+          <div className='flex justify-center gap-6 lg:gap-8'>
             {/* Step 1 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 0
-                  ? 'scale-100 opacity-100'
-                  : 'scale-95 opacity-60'
+                activeStep === 0 ? 'opacity-100' : 'opacity-60'
               }`}
+              style={{
+                width: activeStep === 0 ? '526px' : '312px',
+                minWidth: activeStep === 0 ? '526px' : '312px',
+              }}
             >
-              <div className='rounded-3xl bg-[#3b2008] p-6 text-white shadow-xl h-full'>
+              <div
+                className='rounded-3xl bg-[#3b2008] p-6 pb-10 text-white shadow-xl relative overflow-hidden flex flex-col'
+                style={{ height: '568px' }}
+              >
                 <div className='mb-6 text-lg font-semibold text-white/70'>
                   01
                 </div>
-                <div className='rounded-2xl bg-[#f8f6f3] p-5 text-gray-900 shadow-lg'>
-                  <div className='space-y-3'>
-                    {/* Heading */}
-                    <div className='text-center'>
-                      <div className='text-xs font-semibold text-gray-800'>
-                        Let's get started with your 9th Swift account Choose
-                        your business type
-                      </div>
-                      <div className='mt-1 text-[9px] text-gray-500'>
-                        Each is signed with different needs in mind
-                      </div>
-                    </div>
-
-                    {/* Business Type Cards */}
-                    <div>
-                      <div className='mb-2 text-[10px] font-semibold text-gray-700'>
-                        Business type *
-                      </div>
-                      <div className='grid grid-cols-3 gap-1.5'>
-                        {/* Individual */}
-                        <div className='rounded-lg border border-gray-200 bg-white p-2 text-center'>
-                          <div className='mx-auto flex h-5 w-5 items-center justify-center rounded-full bg-orange-100'>
-                            <svg
-                              className='h-3 w-3 text-orange-500'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              stroke='currentColor'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
-                              />
-                            </svg>
-                          </div>
-                          <div className='mt-1 text-[8px] font-semibold text-gray-800'>
-                            Individual
-                          </div>
-                          <div className='mt-0.5 text-[7px] leading-tight text-gray-500'>
-                            Lorem ipsum
-                          </div>
+                <div className='rounded-2xl bg-[#ffe1d0] p-3 shadow-lg flex-grow'>
+                  <div className='rounded-2xl bg-[#f8f6f3] p-5 text-gray-900 shadow-lg flex-grow'>
+                    <div className='space-y-3'>
+                      {/* Heading */}
+                      <div className='text-center'>
+                        <div className='text-xs font-semibold text-gray-800'>
+                          Let's get started with your 9th Swift account Choose
+                          your business type
                         </div>
-
-                        {/* Corporate - Selected */}
-                        <div className='rounded-lg border-2 border-orange-400 bg-orange-50 p-2 text-center'>
-                          <div className='mx-auto flex h-5 w-5 items-center justify-center rounded-full bg-orange-300'>
-                            <svg
-                              className='h-3 w-3 text-white'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              stroke='currentColor'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
-                              />
-                            </svg>
-                          </div>
-                          <div className='mt-1 text-[8px] font-semibold text-gray-800'>
-                            Corporate
-                          </div>
-                          <div className='mt-0.5 text-[7px] leading-tight text-gray-600'>
-                            Lorem ipsum
-                          </div>
-                        </div>
-
-                        {/* Government */}
-                        <div className='rounded-lg border border-gray-200 bg-white p-2 text-center'>
-                          <div className='mx-auto flex h-5 w-5 items-center justify-center rounded-full bg-orange-100'>
-                            <svg
-                              className='h-3 w-3 text-orange-500'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              stroke='currentColor'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z'
-                              />
-                            </svg>
-                          </div>
-                          <div className='mt-1 text-[8px] font-semibold text-gray-800'>
-                            Government
-                          </div>
-                          <div className='mt-0.5 text-[7px] leading-tight text-gray-500'>
-                            Lorem ipsum
-                          </div>
+                        <div className='mt-1 text-[9px] text-gray-500'>
+                          Each is signed with different needs in mind
                         </div>
                       </div>
-                    </div>
 
-                    {/* Dropdown */}
-                    <div>
-                      <div className='mb-1 text-[10px] font-semibold text-gray-700'>
-                        Business Category *
-                      </div>
-                      <div className='flex items-center justify-between rounded-lg border border-gray-300 bg-white px-2 py-1.5 text-[10px] text-gray-500'>
-                        <span>Sales, Logistics...</span>
-                        <svg
-                          className='h-3 w-3 text-gray-400'
-                          fill='none'
-                          viewBox='0 0 24 24'
-                          stroke='currentColor'
-                        >
-                          <path
-                            strokeLinecap='round'
-                            strokeLinejoin='round'
-                            strokeWidth={2}
-                            d='M19 9l-7 7-7-7'
-                          />
-                        </svg>
-                      </div>
-                    </div>
+                      {/* Business Type Cards */}
+                      <div>
+                        <div className='mb-2 text-[10px] font-semibold text-gray-700'>
+                          Business type *
+                        </div>
+                        <div className='grid grid-cols-3 gap-1.5'>
+                          {/* Individual */}
+                          <div className='rounded-lg border border-gray-200 bg-white p-2 text-center'>
+                            <div className='mx-auto flex h-5 w-5 items-center justify-center rounded-full bg-orange-100'>
+                              <svg
+                                className='h-3 w-3 text-orange-500'
+                                fill='none'
+                                viewBox='0 0 24 24'
+                                stroke='currentColor'
+                              >
+                                <path
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
+                                  strokeWidth={2}
+                                  d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
+                                />
+                              </svg>
+                            </div>
+                            <div className='mt-1 text-[8px] font-semibold text-gray-800'>
+                              Individual
+                            </div>
+                            <div className='mt-0.5 text-[7px] leading-tight text-gray-500'>
+                              Lorem ipsum
+                            </div>
+                          </div>
 
-                    {/* Terms */}
-                    <div className='rounded-md bg-blue-50 p-2'>
-                      <div className='text-[8px] leading-tight text-gray-700'>
-                        By clicking on Create Account, you agree to{' '}
-                        <span className='font-medium text-blue-600'>
-                          User Agreement
-                        </span>{' '}
-                        and{' '}
-                        <span className='font-medium text-blue-600'>
-                          Privacy Policy
+                          {/* Corporate - Selected */}
+                          <div className='rounded-lg border-2 border-orange-400 bg-orange-50 p-2 text-center'>
+                            <div className='mx-auto flex h-5 w-5 items-center justify-center rounded-full bg-orange-300'>
+                              <svg
+                                className='h-3 w-3 text-white'
+                                fill='none'
+                                viewBox='0 0 24 24'
+                                stroke='currentColor'
+                              >
+                                <path
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
+                                  strokeWidth={2}
+                                  d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
+                                />
+                              </svg>
+                            </div>
+                            <div className='mt-1 text-[8px] font-semibold text-gray-800'>
+                              Corporate
+                            </div>
+                            <div className='mt-0.5 text-[7px] leading-tight text-gray-600'>
+                              Lorem ipsum
+                            </div>
+                          </div>
+
+                          {/* Government */}
+                          <div className='rounded-lg border border-gray-200 bg-white p-2 text-center'>
+                            <div className='mx-auto flex h-5 w-5 items-center justify-center rounded-full bg-orange-100'>
+                              <svg
+                                className='h-3 w-3 text-orange-500'
+                                fill='none'
+                                viewBox='0 0 24 24'
+                                stroke='currentColor'
+                              >
+                                <path
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
+                                  strokeWidth={2}
+                                  d='M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z'
+                                />
+                              </svg>
+                            </div>
+                            <div className='mt-1 text-[8px] font-semibold text-gray-800'>
+                              Government
+                            </div>
+                            <div className='mt-0.5 text-[7px] leading-tight text-gray-500'>
+                              Lorem ipsum
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Dropdown */}
+                      <div>
+                        <div className='mb-1 text-[10px] font-semibold text-gray-700'>
+                          Business Category *
+                        </div>
+                        <div className='flex items-center justify-between rounded-lg border border-gray-300 bg-white px-2 py-1.5 text-[10px] text-gray-500'>
+                          <span>Sales, Logistics...</span>
+                          <svg
+                            className='h-3 w-3 text-gray-400'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            stroke='currentColor'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth={2}
+                              d='M19 9l-7 7-7-7'
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* Terms */}
+                      <div className='rounded-md  p-2'>
+                        <div className='text-[8px] leading-tight text-gray-700'>
+                          By clicking on Create Account, you agree to{' '}
+                          <span className='font-medium text-[#fff5ee]'>
+                            User Agreement
+                          </span>{' '}
+                          and{' '}
+                          <span className='font-medium text-[#fff5ee]'>
+                            Privacy Policy
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Button */}
+                      <button className='w-full rounded-lg bg-orange-400 py-2 text-[10px] font-semibold text-white'>
+                        Create Account
+                      </button>
+
+                      {/* Footer */}
+                      <div className='text-center text-[9px] text-gray-600'>
+                        Already Registered?{' '}
+                        <span className='font-semibold text-gray-900'>
+                          Login
                         </span>
                       </div>
                     </div>
-
-                    {/* Button */}
-                    <button className='w-full rounded-lg bg-orange-400 py-2 text-[10px] font-semibold text-white'>
-                      Create Account
-                    </button>
-
-                    {/* Footer */}
-                    <div className='text-center text-[9px] text-gray-600'>
-                      Already Registered?{' '}
-                      <span className='font-semibold text-gray-900'>Login</span>
-                    </div>
                   </div>
                 </div>
-                <h3 className='mt-5 text-lg font-bold leading-tight'>
+                <h3 className='mt-auto pt-5 text-lg font-bold leading-tight'>
                   Select you business type.
                 </h3>
-                <p className='mt-2 text-sm text-white/80 leading-relaxed'>
+                <p className='mt-2 text-sm text-white/80 leading-relaxed min-h-[3rem]'>
                   Whether you are an individual, corporate or government
                   institution, we got you covered.
                 </p>
+
+                {/* Progress Bar at bottom of card */}
+                {activeStep === 0 && (
+                  <div className='absolute bottom-6 left-6 right-6 h-1 bg-white/20 rounded-full'>
+                    <div
+                      className='h-full bg-white rounded-full transition-all duration-100 ease-linear'
+                      style={{ width: `${progress}%` }}
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
             {/* Step 2 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 1
-                  ? 'scale-100 opacity-100'
-                  : 'scale-95 opacity-60'
+                activeStep === 1 ? 'opacity-100' : 'opacity-60'
               }`}
+              style={{
+                width: activeStep === 1 ? '526px' : '312px',
+                minWidth: activeStep === 1 ? '526px' : '312px',
+              }}
             >
-              <div className='rounded-3xl bg-[#3b2008] p-6 text-white shadow-xl h-full'>
+              <div
+                className='rounded-3xl bg-[#3b2008] p-6 pb-10 text-white shadow-xl relative overflow-hidden flex flex-col'
+                style={{ height: '568px' }}
+              >
                 <div className='mb-6 text-lg font-semibold text-white/70'>
                   02
                 </div>
-                <div className='rounded-2xl bg-[#b8afa5] p-5 shadow-lg'>
+                <div className='rounded-2xl bg-[#ffe1d0] p-3 shadow-lg flex-grow'>
                   <div className='rounded-xl bg-white/95 p-4'>
                     <div className='space-y-2.5'>
                       {/* Header */}
@@ -311,7 +335,7 @@ export default function StepsSection() {
                             />
                           </div>
                         </div>
-                        <div>
+                        {/* <div>
                           <div className='mb-1 text-[9px] font-medium text-gray-700'>
                             VAT/SNAL/CAC
                           </div>
@@ -320,7 +344,7 @@ export default function StepsSection() {
                             className='w-full rounded-md border border-gray-300 bg-white px-2 py-1.5 text-[9px]'
                             readOnly
                           />
-                        </div>
+                        </div> */}
                         <div>
                           <div className='mb-1 text-[9px] font-medium text-gray-700'>
                             Phone Number
@@ -348,28 +372,43 @@ export default function StepsSection() {
                     </div>
                   </div>
                 </div>
-                <h3 className='mt-5 text-lg font-bold leading-tight'>
+                <h3 className='mt-auto pt-5 text-lg font-bold leading-tight'>
                   Create your free account.
                 </h3>
-                <p className='mt-2 text-sm text-white/80 leading-relaxed'>
+                <p className='mt-2 text-sm text-white/80 leading-relaxed min-h-[3rem]'>
                   Enter your business details and get verified quickly.
                 </p>
+
+                {/* Progress Bar at bottom of card */}
+                {activeStep === 1 && (
+                  <div className='absolute bottom-6 left-6 right-6 h-1 bg-white/20 rounded-full'>
+                    <div
+                      className='h-full bg-white rounded-full transition-all duration-100 ease-linear'
+                      style={{ width: `${progress}%` }}
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
             {/* Step 3 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 2
-                  ? 'scale-100 opacity-100'
-                  : 'scale-95 opacity-60'
+                activeStep === 2 ? 'opacity-100' : 'opacity-60'
               }`}
+              style={{
+                width: activeStep === 2 ? '526px' : '312px',
+                minWidth: activeStep === 2 ? '526px' : '312px',
+              }}
             >
-              <div className='rounded-3xl bg-[#3b2008] p-6 text-white shadow-xl h-full'>
+              <div
+                className='rounded-3xl bg-[#3b2008] p-6 pb-10 text-white shadow-xl relative overflow-hidden flex flex-col'
+                style={{ height: '568px' }}
+              >
                 <div className='mb-6 text-lg font-semibold text-white/70'>
                   03
                 </div>
-                <div className='rounded-2xl bg-[#b8afa5] p-5 shadow-lg'>
+                <div className='rounded-2xl bg-[#ffe1d0] p-3 shadow-lg flex-grow'>
                   <div className='rounded-xl bg-white/95 p-4'>
                     <div className='space-y-3'>
                       {/* Stats Grid */}
@@ -446,47 +485,52 @@ export default function StepsSection() {
                     </div>
                   </div>
                 </div>
-                <h3 className='mt-5 text-lg font-bold leading-tight'>
+                <h3 className='mt-auto pt-5 text-lg font-bold leading-tight'>
                   Start accepting payments.
                 </h3>
-                <p className='mt-2 text-sm text-white/80 leading-relaxed'>
+                <p className='mt-2 text-sm text-white/80 leading-relaxed min-h-[3rem]'>
                   Share payment links or integrate with your website.
                 </p>
+
+                {/* Progress Bar at bottom of card */}
+                {activeStep === 2 && (
+                  <div className='absolute bottom-6 left-6 right-6 h-1 bg-white/20 rounded-full'>
+                    <div
+                      className='h-full bg-white rounded-full transition-all duration-100 ease-linear'
+                      style={{ width: `${progress}%` }}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </div>
 
-          {/* Progress Bar Loader */}
-          <div className='mt-12 max-w-md mx-auto'>
-            <div className='flex items-center justify-center gap-3 mb-4'>
-              {steps.map((step) => (
-                <button
-                  key={step.id}
-                  onClick={() => setActiveStep(step.id)}
-                  className={`transition-all duration-300 ${
-                    activeStep === step.id
-                      ? 'h-2.5 w-2.5 rounded-full bg-orange-500 ring-4 ring-orange-100'
-                      : 'h-2 w-2 rounded-full bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Go to step ${step.number}`}
-                />
-              ))}
-            </div>
-            
-            {/* Animated Progress Bar */}
-            <div className='relative h-1.5 w-full overflow-hidden rounded-full bg-gray-200'>
-              <div
-                className='absolute left-0 top-0 h-full bg-gradient-to-r from-orange-400 to-orange-500 transition-all duration-100 ease-linear rounded-full'
-                style={{ width: `${progress}%` }}
+          {/* Navigation Dots */}
+          {/* <div className='mt-12 flex items-center justify-center gap-3'>
+            {steps.map((step) => (
+              <button
+                key={step.id}
+                onClick={() => {
+                  setActiveStep(step.id);
+                  setProgress(0);
+                }}
+                className={`transition-all duration-300 ${
+                  activeStep === step.id
+                    ? 'h-2.5 w-2.5 rounded-full bg-orange-500 ring-4 ring-orange-100'
+                    : 'h-2 w-2 rounded-full bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to step ${step.number}`}
               />
-            </div>
-          </div>
+            ))}
+          </div> */}
 
           {/* Navigation Controls */}
-          <div className='mt-8 flex items-center justify-center gap-4'>
+          {/* <div className='mt-8 flex items-center justify-center gap-4'>
             <button
               onClick={() => {
-                setActiveStep((prev) => (prev > 0 ? prev - 1 : steps.length - 1));
+                setActiveStep((prev) =>
+                  prev > 0 ? prev - 1 : steps.length - 1,
+                );
                 setProgress(0);
               }}
               className='flex h-10 w-10 items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-700 transition hover:border-gray-400 hover:bg-gray-50'
@@ -508,7 +552,9 @@ export default function StepsSection() {
             </button>
             <button
               onClick={() => {
-                setActiveStep((prev) => (prev < steps.length - 1 ? prev + 1 : 0));
+                setActiveStep((prev) =>
+                  prev < steps.length - 1 ? prev + 1 : 0,
+                );
                 setProgress(0);
               }}
               className='flex h-10 w-10 items-center justify-center rounded-lg border border-gray-900 bg-gray-900 text-white transition hover:bg-gray-800'
@@ -528,7 +574,7 @@ export default function StepsSection() {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

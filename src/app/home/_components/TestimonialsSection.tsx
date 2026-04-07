@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
               <span className='inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-semibold text-gray-500'>
                 {t.tag}
               </span>
-              <div className='mt-4 text-2xl text-orange-300'>""</div>
+              <div className='mt-4 text-5xl text-orange-300'>""</div>
               <p className='mt-2 text-sm text-gray-600 leading-relaxed'>
                 {t.quote}
               </p>

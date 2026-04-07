@@ -166,7 +166,7 @@ export default function PaymentFeatures() {
           <h2 className='mt-6 text-4xl font-bold text-gray-900 leading-tight mb-6 sm:text-5xl'>
             Built for payments that are fast, global, and secure.
           </h2>
-          <p className='text-lg text-gray-600 leading-relaxed'>
+          <p className='text-base text-gray-600 leading-relaxed'>
             Whether you're running a shop, a school, or a growing enterprise,
             getting paid should be the easiest part of your day. We made sure it
             is.

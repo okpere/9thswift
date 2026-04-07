@@ -317,7 +317,7 @@ export default function FeaturesSection() {
     <section className='bg-gray-50 py-16 sm:py-24'>
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
         <div className='text-center'>
-          <h2 className='text-3xl sm:text-4xl font-bold text-gray-900'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-gray-900'>
             Everything you need to get paid.
           </h2>
           <p className='mt-2 text-sm text-gray-500'>
