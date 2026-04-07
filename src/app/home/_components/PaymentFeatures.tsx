@@ -163,7 +163,6 @@ export default function PaymentFeatures() {
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
         {/* Header */}
         <div className='text-center max-w-3xl mx-auto mb-16'>
-          <SectionBadge label='Features' />
           <h2 className='mt-6 text-4xl font-bold text-gray-900 leading-tight mb-6 sm:text-5xl'>
             Built for payments that are fast, global, and secure.
           </h2>
@@ -175,21 +174,24 @@ export default function PaymentFeatures() {
         </div>
 
         {/* Feature Cards */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
           {features.map((feature) => (
-            <div key={feature.title} className='text-center'>
+            <div
+              key={feature.title}
+              className='bg-gray-50 rounded-3xl p-8 lg:p-10 flex flex-col'
+            >
               {/* Title */}
-              <h3 className='text-xl font-bold text-gray-900 mb-3'>
+              <h3 className='text-xl font-bold text-gray-900 mb-4'>
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className='text-gray-600 leading-relaxed mb-8 max-w-sm mx-auto'>
+              <p className='text-gray-600 leading-relaxed mb-6'>
                 {feature.description}
               </p>
 
               {/* Icon */}
-              <div className='mt-auto'>{feature.icon}</div>
+              <div className='mt-auto pt-4'>{feature.icon}</div>
             </div>
           ))}
         </div>

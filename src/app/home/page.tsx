@@ -8,16 +8,15 @@ import TestimonialsSection from '@/app/home/_components/TestimonialsSection';
 import PricingSection from './_components/PricingSection';
 import TrustLogos from './_components/TrustLogos';
 
-
 export default function HomePage() {
   return (
     <>
       <HeroSection />
       <TrustLogos />
       <PaymentFeatures />
+      <FeaturesSection />
       <IndustryShowcase />
       <PricingSection />
-      <FeaturesSection />
       <StepsSection />
       <TestimonialsSection />
       <CTASection />

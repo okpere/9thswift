@@ -23,10 +23,6 @@ export default function TestimonialsSection() {
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between'>
           <div>
-            <span className='inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-600'>
-              <span className='h-1.5 w-1.5 rounded-full bg-orange-400' />
-              Testimonials
-            </span>
             <h2 className='mt-4 text-3xl sm:text-4xl font-bold text-gray-900'>
               Loved by businesses
               <br />

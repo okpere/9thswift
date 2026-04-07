@@ -64,7 +64,7 @@ function IndustryTag({ label }: { label: string }) {
 function IndustryCard({ title, description, imageUrl, tags }: Industry) {
   return (
     <article
-      className='group relative h-[22rem] w-[22rem] shrink-0 overflow-hidden rounded-[2rem] bg-neutral-200 shadow-[0_20px_50px_-30px_rgba(17,24,39,0.3)] sm:w-[24rem]'
+      className='group relative h-[22rem] w-[28rem] shrink-0 overflow-hidden rounded-[2rem] bg-neutral-200 shadow-[0_20px_50px_-30px_rgba(17,24,39,0.3)] sm:w-[32rem]'
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(15,23,42,0.05) 0%, rgba(15,23,42,0.25) 54%, rgba(15,23,42,0.85) 100%), url(${imageUrl})`,
         backgroundPosition: 'center',
@@ -141,8 +141,7 @@ export default function IndustryShowcase() {
     <section className='overflow-hidden bg-white py-20 sm:py-24'>
       <div className='mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8'>
         <div className='mx-auto max-w-3xl text-center'>
-          <SectionBadge label='Who we Serve' />
-          <h2 className='mt-6 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl md:text-6xl'>
+          <h2 className='mt-6 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl '>
             Built for every industry
           </h2>
           <p className='mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-500'>
