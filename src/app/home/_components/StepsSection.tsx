@@ -408,79 +408,232 @@ export default function StepsSection() {
                 <div className='mb-6 text-lg font-semibold text-white/70'>
                   03
                 </div>
-                <div className='rounded-2xl bg-[#ffe1d0] p-3 shadow-lg flex-grow'>
-                  <div className='rounded-xl bg-white/95 p-4'>
-                    <div className='space-y-3'>
-                      {/* Stats Grid */}
-                      <div className='grid grid-cols-2 gap-2'>
-                        <div className='rounded-lg bg-gradient-to-br from-orange-100 to-orange-50 p-3 shadow-sm'>
-                          <div className='text-[9px] font-medium text-orange-800'>
-                            Total Revenue
-                          </div>
-                          <div className='mt-1 text-lg font-bold text-orange-900'>
-                            ₦2.4M
-                          </div>
-                          <div className='mt-2 flex items-end gap-0.5'>
-                            <div className='h-4 w-1.5 rounded-sm bg-orange-300' />
-                            <div className='h-5 w-1.5 rounded-sm bg-orange-300' />
-                            <div className='h-7 w-1.5 rounded-sm bg-orange-400' />
-                            <div className='h-5 w-1.5 rounded-sm bg-orange-300' />
-                            <div className='h-8 w-1.5 rounded-sm bg-orange-400' />
-                          </div>
+                <div className='rounded-2xl bg-[#ffe1d0] p-2 shadow-lg flex-grow overflow-hidden'>
+                  <div className='rounded-xl bg-white h-full flex overflow-hidden'>
+                    {/* Sidebar */}
+                    <div className='w-16 bg-[#ffe8d7] border-r border-orange-100 flex flex-col py-1.5 px-1 gap-0.5 overflow-hidden'>
+                      {/* Logo */}
+                      <div className='flex items-center gap-1 mb-2 px-0.5'>
+                        <svg
+                          width='10'
+                          height='10'
+                          viewBox='0 0 32 32'
+                          fill='none'
+                        >
+                          <path
+                            d='M8 28 L16 4 L24 16 L16 20 Z'
+                            fill='#F97316'
+                          />
+                          <path d='M8 28 L16 20 L12 28 Z' fill='#DC2626' />
+                        </svg>
+                        <span className='font-black text-[7px] text-gray-900'>
+                          9th
+                        </span>
+                      </div>
+
+                      {/* Section Label */}
+                      <p className='text-[5px] font-semibold text-gray-400 tracking-wider px-0.5 mb-0.5'>
+                        OVERVIEW
+                      </p>
+
+                      {/* Dashboard - Active */}
+                      <div className='flex items-center gap-1 px-1 py-1 rounded bg-orange-500 text-white mb-1'>
+                        <span className='text-[7px]'>⊞</span>
+                        <span className='text-[6px] font-semibold'>
+                          Dashboard
+                        </span>
+                      </div>
+
+                      {/* Section Label */}
+                      <p className='text-[5px] font-semibold text-gray-400 tracking-wider px-0.5 mt-1 mb-0.5'>
+                        9TH HUB
+                      </p>
+
+                      {/* Menu Items */}
+                      <div className='flex items-center gap-1 px-1 py-0.5 rounded text-gray-600'>
+                        <span className='text-[7px]'>📊</span>
+                        <span className='text-[6px]'>Transaction</span>
+                      </div>
+                      <div className='flex items-center gap-1 px-1 py-0.5 rounded text-gray-600'>
+                        <span className='text-[7px]'>👥</span>
+                        <span className='text-[6px]'>Customers</span>
+                      </div>
+                      <div className='flex items-center gap-1 px-1 py-0.5 rounded text-gray-600'>
+                        <span className='text-[7px]'>💳</span>
+                        <span className='text-[6px]'>Wallet</span>
+                      </div>
+
+                      {/* Section Labels */}
+                      <p className='text-[5px] font-semibold text-gray-400 tracking-wider px-0.5 mt-1'>
+                        OPERATIONS
+                      </p>
+                      <p className='text-[5px] font-semibold text-gray-400 tracking-wider px-0.5 mt-1'>
+                        ADMIN
+                      </p>
+                    </div>
+
+                    {/* Main Content */}
+                    <div className='flex-1 flex flex-col'>
+                      {/* Header */}
+                      <div className='bg-white border-b border-orange-100 px-2 py-1 flex items-center justify-between'>
+                        <div className='flex items-center gap-1'>
+                          <span className='text-orange-400 text-[8px]'>📋</span>
+                          <span className='text-[7px] font-bold text-gray-800'>
+                            Overview
+                          </span>
                         </div>
-                        <div className='rounded-lg bg-gradient-to-br from-orange-400 to-orange-300 p-3 shadow-md'>
-                          <div className='text-[9px] font-medium text-orange-900'>
-                            Transactions
+                        <div className='flex items-center gap-1'>
+                          <div className='relative'>
+                            <span className='text-[10px]'>🔔</span>
+                            <span className='absolute -top-0.5 -right-0.5 w-1 h-1 bg-orange-400 rounded-full'></span>
                           </div>
-                          <div className='mt-1 text-lg font-bold text-orange-950'>
-                            1,234
+                          <div className='w-4 h-4 rounded-full bg-orange-200 flex items-center justify-center text-[6px] font-bold text-orange-600'>
+                            SM
                           </div>
-                          <div className='mt-2 space-y-0.5'>
-                            <div className='h-1 w-full rounded-full bg-orange-500' />
-                            <div className='h-1 w-3/4 rounded-full bg-orange-500' />
-                            <div className='h-1 w-5/6 rounded-full bg-orange-500' />
+                          <div>
+                            <p className='text-[6px] font-semibold text-gray-800'>
+                              Sharaf M.
+                            </p>
+                            <p className='text-[5px] text-gray-400'>
+                              user@email.com
+                            </p>
                           </div>
                         </div>
                       </div>
 
-                      {/* Recent Activity */}
-                      <div className='rounded-lg bg-gray-50 p-2.5'>
-                        <div className='mb-2 text-[9px] font-semibold text-gray-700'>
-                          Recent Transactions
+                      {/* Content with Right Sidebar */}
+                      <div className='flex flex-1 overflow-hidden bg-[#FFF8F5]'>
+                        {/* Main Content Area */}
+                        <div className='flex-1 p-1.5 space-y-1 overflow-hidden'>
+                          {/* Action Bar */}
+                          <div className='bg-white rounded-lg px-2 py-1 border border-orange-100 flex items-center justify-between'>
+                            <div className='flex items-center gap-1'>
+                              <span className='text-[7px] font-semibold text-gray-800'>
+                                Overview
+                              </span>
+                            </div>
+                            <div className='flex items-center gap-0.5'>
+                              <button className='text-[5px] text-gray-500 border border-gray-200 rounded px-1 py-0.5 bg-white'>
+                                Export
+                              </button>
+                              <button className='text-[5px] text-gray-500 border border-gray-200 rounded px-1 py-0.5 bg-white'>
+                                Filter
+                              </button>
+                            </div>
+                          </div>
+
+                          {/* Stats Cards */}
+                          <div className='grid grid-cols-3 gap-1'>
+                            <div className='bg-white rounded p-1.5 border border-orange-100'>
+                              <div className='w-3 h-3 rounded bg-gray-100 flex items-center justify-center mb-0.5'>
+                                <span className='text-[6px]'>📶</span>
+                              </div>
+                              <div className='text-[5px] text-gray-400'>
+                                Total Transaction
+                              </div>
+                              <div className='text-[8px] font-extrabold text-gray-900'>
+                                ₦23.4M
+                              </div>
+                            </div>
+                            <div className='bg-white rounded p-1.5 border border-orange-100'>
+                              <div className='w-3 h-3 rounded bg-gray-100 flex items-center justify-center mb-0.5'>
+                                <span className='text-[6px]'>📥</span>
+                              </div>
+                              <div className='text-[5px] text-gray-400'>
+                                Settlements
+                              </div>
+                              <div className='text-[8px] font-extrabold text-gray-900'>
+                                ₦23.1M
+                              </div>
+                            </div>
+                            <div className='bg-white rounded p-1.5 border border-orange-100'>
+                              <div className='w-3 h-3 rounded bg-gray-100 flex items-center justify-center mb-0.5'>
+                                <span className='text-[6px]'>👤</span>
+                              </div>
+                              <div className='text-[5px] text-gray-400'>
+                                Customers
+                              </div>
+                              <div className='text-[8px] font-extrabold text-gray-900'>
+                                7,890
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Chart Area */}
+                          <div className='bg-white rounded border border-orange-100 p-1.5 flex-1 flex flex-col'>
+                            <div className='flex items-center gap-1 mb-1'>
+                              <span className='text-[6px] font-bold text-gray-800'>
+                                Transaction Trend
+                              </span>
+                              <span className='text-[5px] text-gray-400'>
+                                Total Inflow
+                              </span>
+                            </div>
+                            <div className='flex-1 flex items-end justify-between gap-0.5 pb-1'>
+                              {[
+                                40, 60, 45, 70, 55, 80, 65, 75, 85, 70, 90, 78,
+                              ].map((height, i) => (
+                                <div
+                                  key={i}
+                                  className='flex-1 bg-gradient-to-t from-orange-400 to-orange-300 rounded-t'
+                                  style={{ height: `${height}%` }}
+                                />
+                              ))}
+                            </div>
+                            <div className='flex justify-between border-t border-gray-100 pt-0.5'>
+                              <span className='text-[5px] text-gray-400'>
+                                Jan
+                              </span>
+                              <span className='text-[5px] text-gray-400'>
+                                Mar
+                              </span>
+                              <span className='text-[5px] text-gray-400'>
+                                Jun
+                              </span>
+                              <span className='text-[5px] text-gray-400'>
+                                Sep
+                              </span>
+                              <span className='text-[5px] text-gray-400'>
+                                Dec
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                        <div className='space-y-1.5'>
-                          {[1, 2, 3].map((i) => (
-                            <div
-                              key={i}
-                              className='flex items-center justify-between rounded-md bg-white p-1.5 shadow-sm'
-                            >
-                              <div className='flex items-center gap-1.5'>
-                                <div className='h-4 w-4 rounded-full bg-gradient-to-br from-orange-400 to-orange-300' />
-                                <div>
-                                  <div className='text-[8px] font-medium text-gray-800'>
-                                    Payment #{1000 + i}
-                                  </div>
-                                  <div className='text-[7px] text-gray-500'>
-                                    2 mins ago
+
+                        {/* Notification Sidebar */}
+                        <div className='w-16 bg-white border-l border-orange-100 flex flex-col'>
+                          <div className='px-1 py-1 border-b border-orange-50'>
+                            <h3 className='text-[6px] font-bold text-gray-800'>
+                              Notifications
+                            </h3>
+                            <p className='text-[5px] text-gray-500'>Recent</p>
+                          </div>
+                          <div className='flex-1 px-1 py-1 space-y-1 overflow-hidden'>
+                            {[1, 2, 3].map((i) => (
+                              <div
+                                key={i}
+                                className='bg-orange-50 rounded p-1 border border-orange-100'
+                              >
+                                <div className='flex items-start gap-0.5'>
+                                  <span className='text-[6px]'>🔔</span>
+                                  <div className='flex-1'>
+                                    <p className='text-[5px] font-medium text-gray-800 leading-tight'>
+                                      Payment received
+                                    </p>
+                                    <p className='text-[4px] text-gray-500'>
+                                      Just now
+                                    </p>
                                   </div>
                                 </div>
                               </div>
-                              <div className='text-[9px] font-bold text-gray-800'>
-                                ₦{(Math.random() * 10000).toFixed(0)}
-                              </div>
-                            </div>
-                          ))}
+                            ))}
+                          </div>
+                          <div className='px-1 py-1 border-t border-orange-50'>
+                            <button className='w-full bg-orange-400 text-white rounded px-1 py-0.5 text-[5px] font-semibold'>
+                              View All
+                            </button>
+                          </div>
                         </div>
-                      </div>
-
-                      {/* Action Buttons */}
-                      <div className='grid grid-cols-2 gap-2'>
-                        <button className='rounded-lg bg-orange-400 py-2 text-[9px] font-semibold text-white'>
-                          Create Link
-                        </button>
-                        <button className='rounded-lg border-2 border-orange-400 bg-white py-2 text-[9px] font-semibold text-orange-600'>
-                          View Analytics
-                        </button>
                       </div>
                     </div>
                   </div>

@@ -4,9 +4,9 @@ const OurStory = () => {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto'>
         {/* Image Section */}
         <div className='relative'>
-          <div className='aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl'>
+          <div className='aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl'>
             <img
-              src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+              src='https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775557162/imgi_5_image_1_hkfyzw.svg'
               alt='9th Swift team collaborating'
               className='w-full h-full object-cover'
             />
@@ -15,13 +15,6 @@ const OurStory = () => {
 
         {/* Content Section */}
         <div className='text-left lg:pl-8'>
-          {/* What Drives Us Tag */}
-          <div className='inline-flex items-center gap-2 mb-6'>
-            <div className='w-2 h-2 bg-orange-400 rounded-full'></div>
-            <span className='text-orange-400 text-sm font-medium'>
-              What Drives Us
-            </span>
-          </div>
 
           {/* Heading */}
           <h2 className='text-4xl lg:text-5xl font-bold text-gray-900 mb-6'>

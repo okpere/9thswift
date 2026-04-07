@@ -50,13 +50,6 @@ const FAQSection = () => {
       <div className='max-w-6xl mx-auto'>
         {/* Header */}
         <div className='text-center mb-12'>
-          {/* Here to Help Tag */}
-          <div className='inline-flex items-center gap-2 mb-6'>
-            <div className='w-2 h-2 bg-orange-400 rounded-full'></div>
-            <span className='text-orange-400 text-sm font-medium'>
-              Here to Help
-            </span>
-          </div>
 
           {/* Heading */}
           <h1 className='text-4xl lg:text-5xl font-bold text-gray-900 mb-4'>

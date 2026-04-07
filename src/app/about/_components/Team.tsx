@@ -48,13 +48,6 @@ const Team = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <div className='text-center mb-12'>
-          {/* Our Team Tag */}
-          <div className='inline-flex items-center gap-2 mb-6'>
-            <div className='w-2 h-2 bg-orange-400 rounded-full'></div>
-            <span className='text-orange-400 text-sm font-medium'>
-              Our Team
-            </span>
-          </div>
 
           {/* Heading */}
           <h2 className='text-3xl lg:text-5xl font-bold text-gray-900 mb-4'>

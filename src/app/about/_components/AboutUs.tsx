@@ -119,12 +119,6 @@ const AboutUs = () => {
           }}
         >
           <div className='relative z-10'>
-            <div className='inline-flex items-center gap-2 mb-6'>
-              <div className='w-2 h-2 bg-orange-400 rounded-full'></div>
-              <span className='text-orange-400 text-sm font-medium'>
-                Who We Are
-              </span>
-            </div>
             <h2 className='text-4xl lg:text-5xl font-bold text-gray-900 mb-8'>
               About Us
             </h2>
@@ -139,9 +133,9 @@ const AboutUs = () => {
 
         {/* Team Image */}
         <div className='relative mb-16 mt-8'>
-          <div className='aspect-[16/7] mx-auto rounded-2xl overflow-hidden '>
+          <div className='aspect-[16/5] mx-auto rounded-2xl overflow-hidden '>
             <img
-              src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+              src='https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775556959/imgi_8_image_1_eywqfk.svg'
               alt='Team meeting with global presence'
               className='w-full h-full object-cover'
             />
