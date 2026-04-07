@@ -15,7 +15,7 @@ const industries: Industry[] = [
     description:
       'Accept walk-in, online, and invoice payments without changing how you already sell.',
     imageUrl:
-      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80',
+      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566308/Frame_2147226083_cmredn.svg',
     tags: ['Online Store', 'Online Store'],
   },
   {
@@ -23,24 +23,40 @@ const industries: Industry[] = [
     description:
       'Launch fast checkout flows, automate collections, and keep conversion high across devices.',
     imageUrl:
-      'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80',
+      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566286/Frame_2147226084_mvr2nc.svg',
     tags: ['Online Store', 'Online Store'],
   },
   {
-    title: 'Schools',
+    title: 'Schools & Institutions',
     description:
       'Collect tuition, levies, and recurring fees with clean reporting for administrators.',
     imageUrl:
-      'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Online Store'],
+      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566276/Frame_2147226090_dqk7vv.svg',
+    tags: ['Online Store', 'Online Store'],
   },
   {
-    title: 'Logistics',
+    title: 'Enterprises & B2B',
+    description:
+      'Handle complex invoicing, multi-currency payments, and enterprise-grade reconciliation.',
+    imageUrl:
+      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566269/Frame_2147226085_xuriqz.svg',
+    tags: ['Online Store', 'Online Store'],
+  },
+  {
+    title: 'Logistics & Transport',
     description:
       'Manage collections, delivery settlements, and partner payouts in one payment workflow.',
     imageUrl:
-      'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1200&q=80',
-    tags: ['Online Store'],
+      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566264/Frame_2147226086_u6pydp.svg',
+    tags: ['Online Store', 'Online Store'],
+  },
+  {
+    title: 'Developers & SaaS',
+    description:
+      'Integrate powerful payment APIs and automate billing for your software platform.',
+    imageUrl:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    tags: ['Online Store', 'Online Store'],
   },
 ];
 
