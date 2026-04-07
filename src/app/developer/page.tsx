@@ -3,7 +3,7 @@ import DocumentationContent from '@/app/developer/_components/DocumentationConte
 
 export default function DeveloperPage() {
   return (
-    <main className='min-h-screen bg-white'>
+    <main className='min-h-screen bg-white overflow-x-hidden'>
       <DocumentationHeader />
       <DocumentationContent />
     </main>

@@ -50,39 +50,38 @@ export default function StepsSection() {
   }, [activeStep, steps.length]);
 
   return (
-    <section className='bg-white py-16 sm:py-24 overflow-hidden'>
+    <section className='bg-white py-12 sm:py-16 lg:py-24 overflow-hidden'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col items-center text-center'>
-          <h2 className='mt-4 text-4xl sm:text-5xl font-bold text-gray-900'>
+          <h2 className='mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 px-2'>
             Get started in 3 simple steps
           </h2>
-          <p className='mt-2 text-sm text-gray-500'>
+          <p className='mt-2 text-sm lg:text-base text-gray-500 px-2'>
             Running a business is hard enough, getting paid should not be.
           </p>
         </div>
 
         {/* Carousel Container */}
-        <div className='relative mt-16'>
+        <div className='relative mt-8 sm:mt-12 lg:mt-16'>
           <div className='flex justify-center gap-6 lg:gap-8'>
             {/* Step 1 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 0 ? 'opacity-100' : 'opacity-60'
+                activeStep === 0 ? 'opacity-100' : 'opacity-0 lg:opacity-60 hidden lg:block'
               }`}
               style={{
-                width: activeStep === 0 ? '526px' : '312px',
-                minWidth: activeStep === 0 ? '526px' : '312px',
+                width: activeStep === 0 ? 'min(90vw, 526px)' : '312px',
+                minWidth: activeStep === 0 ? 'min(90vw, 526px)' : '312px',
               }}
             >
               <div
-                className='rounded-3xl bg-[#3b2008] p-6 pb-10 text-white shadow-xl relative overflow-hidden flex flex-col'
-                style={{ height: '568px' }}
+                className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'
               >
-                <div className='mb-6 text-lg font-semibold text-white/70'>
+                <div className='mb-4 sm:mb-6 lg:mb-6 text-base sm:text-lg font-semibold text-white/70'>
                   01
                 </div>
-                <div className='rounded-2xl bg-[#ffe1d0] p-3 shadow-lg flex-grow'>
-                  <div className='rounded-2xl bg-[#f8f6f3] p-5 text-gray-900 shadow-lg flex-grow'>
+                <div className='rounded-xl lg:rounded-2xl bg-[#ffe1d0] p-2 sm:p-3 shadow-lg flex-grow'>
+                  <div className='rounded-xl lg:rounded-2xl bg-[#f8f6f3] p-3 sm:p-5 text-gray-900 shadow-lg flex-grow'>
                     <div className='space-y-3'>
                       {/* Heading */}
                       <div className='text-center'>
@@ -230,17 +229,17 @@ export default function StepsSection() {
                     </div>
                   </div>
                 </div>
-                <h3 className='mt-auto pt-5 text-lg font-bold leading-tight'>
+                <h3 className='mt-auto pt-4 sm:pt-5 text-base sm:text-lg font-bold leading-tight'>
                   Select you business type.
                 </h3>
-                <p className='mt-2 text-sm text-white/80 leading-relaxed min-h-[3rem]'>
+                <p className='mt-2 text-sm text-white/80 leading-relaxed'>
                   Whether you are an individual, corporate or government
                   institution, we got you covered.
                 </p>
 
                 {/* Progress Bar at bottom of card */}
                 {activeStep === 0 && (
-                  <div className='absolute bottom-6 left-6 right-6 h-1 bg-white/20 rounded-full'>
+                  <div className='absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 h-1 bg-white/20 rounded-full'>
                     <div
                       className='h-full bg-white rounded-full transition-all duration-100 ease-linear'
                       style={{ width: `${progress}%` }}
@@ -253,21 +252,20 @@ export default function StepsSection() {
             {/* Step 2 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 1 ? 'opacity-100' : 'opacity-60'
+                activeStep === 1 ? 'opacity-100' : 'opacity-0 lg:opacity-60 hidden lg:block'
               }`}
               style={{
-                width: activeStep === 1 ? '526px' : '312px',
-                minWidth: activeStep === 1 ? '526px' : '312px',
+                width: activeStep === 1 ? 'min(90vw, 526px)' : '312px',
+                minWidth: activeStep === 1 ? 'min(90vw, 526px)' : '312px',
               }}
             >
               <div
-                className='rounded-3xl bg-[#3b2008] p-6 pb-10 text-white shadow-xl relative overflow-hidden flex flex-col'
-                style={{ height: '568px' }}
+                className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'
               >
-                <div className='mb-6 text-lg font-semibold text-white/70'>
+                <div className='mb-4 sm:mb-6 lg:mb-6 text-base sm:text-lg font-semibold text-white/70'>
                   02
                 </div>
-                <div className='rounded-2xl bg-[#ffe1d0] p-3 shadow-lg flex-grow'>
+                <div className='rounded-xl lg:rounded-2xl bg-[#ffe1d0] p-2 sm:p-3 shadow-lg flex-grow'>
                   <div className='rounded-xl bg-white/95 p-4'>
                     <div className='space-y-2.5'>
                       {/* Header */}
@@ -372,16 +370,16 @@ export default function StepsSection() {
                     </div>
                   </div>
                 </div>
-                <h3 className='mt-auto pt-5 text-lg font-bold leading-tight'>
+                <h3 className='mt-auto pt-4 sm:pt-5 text-base sm:text-lg font-bold leading-tight'>
                   Create your free account.
                 </h3>
-                <p className='mt-2 text-sm text-white/80 leading-relaxed min-h-[3rem]'>
+                <p className='mt-2 text-sm text-white/80 leading-relaxed'>
                   Enter your business details and get verified quickly.
                 </p>
 
                 {/* Progress Bar at bottom of card */}
                 {activeStep === 1 && (
-                  <div className='absolute bottom-6 left-6 right-6 h-1 bg-white/20 rounded-full'>
+                  <div className='absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 h-1 bg-white/20 rounded-full'>
                     <div
                       className='h-full bg-white rounded-full transition-all duration-100 ease-linear'
                       style={{ width: `${progress}%` }}
@@ -394,21 +392,20 @@ export default function StepsSection() {
             {/* Step 3 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 2 ? 'opacity-100' : 'opacity-60'
+                activeStep === 2 ? 'opacity-100' : 'opacity-0 lg:opacity-60 hidden lg:block'
               }`}
               style={{
-                width: activeStep === 2 ? '526px' : '312px',
-                minWidth: activeStep === 2 ? '526px' : '312px',
+                width: activeStep === 2 ? 'min(90vw, 526px)' : '312px',
+                minWidth: activeStep === 2 ? 'min(90vw, 526px)' : '312px',
               }}
             >
               <div
-                className='rounded-3xl bg-[#3b2008] p-6 pb-10 text-white shadow-xl relative overflow-hidden flex flex-col'
-                style={{ height: '568px' }}
+                className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'
               >
-                <div className='mb-6 text-lg font-semibold text-white/70'>
+                <div className='mb-4 sm:mb-6 lg:mb-6 text-base sm:text-lg font-semibold text-white/70'>
                   03
                 </div>
-                <div className='rounded-2xl bg-[#ffe1d0] p-2 shadow-lg flex-grow overflow-hidden'>
+                <div className='rounded-xl lg:rounded-2xl bg-[#ffe1d0] p-2 shadow-lg flex-grow overflow-hidden'>
                   <div className='rounded-xl bg-white h-full flex overflow-hidden'>
                     {/* Sidebar */}
                     <div className='w-16 bg-[#ffe8d7] border-r border-orange-100 flex flex-col py-1.5 px-1 gap-0.5 overflow-hidden'>
@@ -638,16 +635,16 @@ export default function StepsSection() {
                     </div>
                   </div>
                 </div>
-                <h3 className='mt-auto pt-5 text-lg font-bold leading-tight'>
+                <h3 className='mt-auto pt-4 sm:pt-5 text-base sm:text-lg font-bold leading-tight'>
                   Start accepting payments.
                 </h3>
-                <p className='mt-2 text-sm text-white/80 leading-relaxed min-h-[3rem]'>
+                <p className='mt-2 text-sm text-white/80 leading-relaxed'>
                   Share payment links or integrate with your website.
                 </p>
 
                 {/* Progress Bar at bottom of card */}
                 {activeStep === 2 && (
-                  <div className='absolute bottom-6 left-6 right-6 h-1 bg-white/20 rounded-full'>
+                  <div className='absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 h-1 bg-white/20 rounded-full'>
                     <div
                       className='h-full bg-white rounded-full transition-all duration-100 ease-linear'
                       style={{ width: `${progress}%` }}
@@ -658,7 +655,78 @@ export default function StepsSection() {
             </div>
           </div>
 
-          {/* Navigation Dots */}
+          {/* Navigation Dots - Mobile */}
+          <div className='mt-8 sm:mt-12 flex items-center justify-center gap-2 sm:gap-3 lg:hidden'>
+            {steps.map((step) => (
+              <button
+                key={step.id}
+                onClick={() => {
+                  setActiveStep(step.id);
+                  setProgress(0);
+                }}
+                className={`transition-all duration-300 ${
+                  activeStep === step.id
+                    ? 'h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-orange-500 ring-2 sm:ring-4 ring-orange-100'
+                    : 'h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-gray-300'
+                }`}
+                aria-label={`Go to step ${step.number}`}
+              />
+            ))}
+          </div>
+
+          {/* Navigation Controls - Mobile */}
+          <div className='mt-6 sm:mt-8 flex items-center justify-center gap-3 sm:gap-4 lg:hidden'>
+            <button
+              onClick={() => {
+                setActiveStep((prev) =>
+                  prev > 0 ? prev - 1 : steps.length - 1,
+                );
+                setProgress(0);
+              }}
+              className='flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg border border-gray-300 bg-white text-gray-700 transition hover:border-gray-400 hover:bg-gray-50'
+              aria-label='Previous step'
+            >
+              <svg
+                className='h-4 w-4 sm:h-5 sm:w-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M15 19l-7-7 7-7'
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => {
+                setActiveStep((prev) =>
+                  prev < steps.length - 1 ? prev + 1 : 0,
+                );
+                setProgress(0);
+              }}
+              className='flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg border border-gray-900 bg-gray-900 text-white transition hover:bg-gray-800'
+              aria-label='Next step'
+            >
+              <svg
+                className='h-4 w-4 sm:h-5 sm:w-5'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M9 5l7 7-7 7'
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Navigation Dots - Desktop (commented out) */}
           {/* <div className='mt-12 flex items-center justify-center gap-3'>
             {steps.map((step) => (
               <button
