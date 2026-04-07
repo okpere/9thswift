@@ -158,7 +158,9 @@ app.post("/api/webhook/url", function(req, res) {
           <ol className='space-y-3 text-sm sm:text-base text-gray-700'>
             <li className='flex gap-2 sm:gap-3'>
               <span className='font-semibold shrink-0'>1.</span>
-              <span className='break-words'>Add your webhook URL on the 9thSwift dashboard.</span>
+              <span className='break-words'>
+                Add your webhook URL on the 9thSwift dashboard.
+              </span>
             </li>
             <li className='flex gap-2 sm:gap-3'>
               <span className='font-semibold shrink-0'>2.</span>

@@ -67,16 +67,16 @@ export default function StepsSection() {
             {/* Step 1 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 0 ? 'opacity-100' : 'opacity-0 lg:opacity-60 hidden lg:block'
+                activeStep === 0
+                  ? 'opacity-100'
+                  : 'opacity-0 lg:opacity-60 hidden lg:block'
               }`}
               style={{
                 width: activeStep === 0 ? 'min(90vw, 526px)' : '312px',
                 minWidth: activeStep === 0 ? 'min(90vw, 526px)' : '312px',
               }}
             >
-              <div
-                className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'
-              >
+              <div className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'>
                 <div className='mb-4 sm:mb-6 lg:mb-6 text-base sm:text-lg font-semibold text-white/70'>
                   01
                 </div>
@@ -252,16 +252,16 @@ export default function StepsSection() {
             {/* Step 2 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 1 ? 'opacity-100' : 'opacity-0 lg:opacity-60 hidden lg:block'
+                activeStep === 1
+                  ? 'opacity-100'
+                  : 'opacity-0 lg:opacity-60 hidden lg:block'
               }`}
               style={{
                 width: activeStep === 1 ? 'min(90vw, 526px)' : '312px',
                 minWidth: activeStep === 1 ? 'min(90vw, 526px)' : '312px',
               }}
             >
-              <div
-                className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'
-              >
+              <div className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'>
                 <div className='mb-4 sm:mb-6 lg:mb-6 text-base sm:text-lg font-semibold text-white/70'>
                   02
                 </div>
@@ -392,16 +392,16 @@ export default function StepsSection() {
             {/* Step 3 Card */}
             <div
               className={`transition-all duration-500 ease-in-out ${
-                activeStep === 2 ? 'opacity-100' : 'opacity-0 lg:opacity-60 hidden lg:block'
+                activeStep === 2
+                  ? 'opacity-100'
+                  : 'opacity-0 lg:opacity-60 hidden lg:block'
               }`}
               style={{
                 width: activeStep === 2 ? 'min(90vw, 526px)' : '312px',
                 minWidth: activeStep === 2 ? 'min(90vw, 526px)' : '312px',
               }}
             >
-              <div
-                className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'
-              >
+              <div className='rounded-2xl lg:rounded-3xl bg-[#3b2008] p-4 sm:p-6 lg:p-6 lg:pb-10 text-white shadow-xl relative overflow-hidden flex flex-col h-auto lg:h-[568px]'>
                 <div className='mb-4 sm:mb-6 lg:mb-6 text-base sm:text-lg font-semibold text-white/70'>
                   03
                 </div>
