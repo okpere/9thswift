@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -20,18 +21,8 @@ export default function Navbar() {
     <header className='w-full bg-white border-b border-gray-100 sticky top-0 z-50'>
       <nav className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16'>
         {/* Logo */}
-        <Link href='/' className='flex items-center gap-2 shrink-0'>
-          <svg
-            width='32'
-            height='32'
-            viewBox='0 0 32 32'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path d='M8 28 L16 4 L24 16 L16 20 Z' fill='#F97316' />
-            <path d='M8 28 L16 20 L12 28 Z' fill='#DC2626' />
-          </svg>
-          <span className='text-lg font-bold text-gray-900'>9th Swift</span>
+        <Link href='/' className='shrink-0'>
+          <Logo priority={true} />
         </Link>
 
         {/* Desktop Nav Links */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { Check } from 'lucide-react';
 
 const feeItems = [
   'Bank Transfers (all Nigerian banks)',
@@ -226,8 +227,9 @@ export default function PricingSection() {
               </div>
               <div className='flex items-center justify-between py-3 border-t border-white/10'>
                 <span className='text-sm text-white/50'>Fee Cap Applied</span>
-                <span className='rounded-full border border-green-400/20 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400'>
-                  ✓ Saved {formatNaira(pricing.saved)}
+                <span className='rounded-full border border-green-400/20 bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 flex items-center gap-1'>
+                  <Check className='w-3 h-3' /> Saved{' '}
+                  {formatNaira(pricing.saved)}
                 </span>
               </div>
             </div>

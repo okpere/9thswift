@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CTASection() {
@@ -24,7 +25,7 @@ export default function CTASection() {
             className='inline-flex items-center justify-center gap-2 rounded-xl bg-orange-400 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-colors hover:bg-orange-500 w-full sm:w-auto'
           >
             Create your free account
-            <span aria-hidden='true'>-&gt;</span>
+            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
           </Link>
           <Link
             href='/contact'

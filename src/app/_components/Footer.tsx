@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Users,
 } from 'lucide-react';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -15,14 +16,8 @@ export default function Footer() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12'>
           <div className='lg:col-span-1'>
-            <div className='flex items-center gap-2 mb-4'>
-              <svg width='32' height='32' viewBox='0 0 32 32' fill='none'>
-                <path d='M8 28 L16 4 L24 16 L16 20 Z' fill='#F97316' />
-                <path d='M8 28 L16 20 L12 28 Z' fill='#DC2626' />
-              </svg>
-              <span className='font-bold text-gray-900 text-lg'>
-                <span className='font-black'>9th</span> Swift
-              </span>
+            <div className='mb-4'>
+              <Logo />
             </div>
             <p className='text-sm text-gray-600 leading-relaxed mb-1.5'>
               The operating system for African commerce.

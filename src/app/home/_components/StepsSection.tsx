@@ -1,6 +1,17 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import {
+  BarChart3,
+  Users,
+  Wallet,
+  FileText,
+  Bell,
+  TrendingUp,
+  Download,
+  User,
+} from 'lucide-react';
+import Logo from '@/app/_components/Logo';
 
 export default function StepsSection() {
   const [activeStep, setActiveStep] = useState(0);
@@ -410,23 +421,12 @@ export default function StepsSection() {
                     {/* Sidebar */}
                     <div className='w-16 bg-[#ffe8d7] border-r border-orange-100 flex flex-col py-1.5 px-1 gap-0.5 overflow-hidden'>
                       {/* Logo */}
-                      <div className='flex items-center gap-1 mb-2 px-0.5'>
-                        <svg
-                          width='10'
-                          height='10'
-                          viewBox='0 0 32 32'
-                          fill='none'
-                        >
-                          <path
-                            d='M8 28 L16 4 L24 16 L16 20 Z'
-                            fill='#F97316'
-                          />
-                          <path d='M8 28 L16 20 L12 28 Z' fill='#DC2626' />
-                        </svg>
-                        <span className='font-black text-[7px] text-gray-900'>
-                          9th
-                        </span>
-                      </div>
+                      <Logo
+                        width={16}
+                        height={16}
+                        showText
+                        textClassName='text-[10px]'
+                      />
 
                       {/* Section Label */}
                       <p className='text-[5px] font-semibold text-gray-400 tracking-wider px-0.5 mb-0.5'>
@@ -448,15 +448,15 @@ export default function StepsSection() {
 
                       {/* Menu Items */}
                       <div className='flex items-center gap-1 px-1 py-0.5 rounded text-gray-600'>
-                        <span className='text-[7px]'>📊</span>
+                        <BarChart3 className='w-2 h-2' />
                         <span className='text-[6px]'>Transaction</span>
                       </div>
                       <div className='flex items-center gap-1 px-1 py-0.5 rounded text-gray-600'>
-                        <span className='text-[7px]'>👥</span>
+                        <Users className='w-2 h-2' />
                         <span className='text-[6px]'>Customers</span>
                       </div>
                       <div className='flex items-center gap-1 px-1 py-0.5 rounded text-gray-600'>
-                        <span className='text-[7px]'>💳</span>
+                        <Wallet className='w-2 h-2' />
                         <span className='text-[6px]'>Wallet</span>
                       </div>
 
@@ -474,14 +474,14 @@ export default function StepsSection() {
                       {/* Header */}
                       <div className='bg-white border-b border-orange-100 px-2 py-1 flex items-center justify-between'>
                         <div className='flex items-center gap-1'>
-                          <span className='text-orange-400 text-[8px]'>📋</span>
+                          <FileText className='w-2 h-2 text-orange-400' />
                           <span className='text-[7px] font-bold text-gray-800'>
                             Overview
                           </span>
                         </div>
                         <div className='flex items-center gap-1'>
                           <div className='relative'>
-                            <span className='text-[10px]'>🔔</span>
+                            <Bell className='w-2.5 h-2.5 text-gray-500' />
                             <span className='absolute -top-0.5 -right-0.5 w-1 h-1 bg-orange-400 rounded-full'></span>
                           </div>
                           <div className='w-4 h-4 rounded-full bg-orange-200 flex items-center justify-center text-[6px] font-bold text-orange-600'>
@@ -523,7 +523,7 @@ export default function StepsSection() {
                           <div className='grid grid-cols-3 gap-1'>
                             <div className='bg-white rounded p-1.5 border border-orange-100'>
                               <div className='w-3 h-3 rounded bg-gray-100 flex items-center justify-center mb-0.5'>
-                                <span className='text-[6px]'>📶</span>
+                                <TrendingUp className='w-1.5 h-1.5 text-orange-500' />
                               </div>
                               <div className='text-[5px] text-gray-400'>
                                 Total Transaction
@@ -534,7 +534,7 @@ export default function StepsSection() {
                             </div>
                             <div className='bg-white rounded p-1.5 border border-orange-100'>
                               <div className='w-3 h-3 rounded bg-gray-100 flex items-center justify-center mb-0.5'>
-                                <span className='text-[6px]'>📥</span>
+                                <Download className='w-1.5 h-1.5 text-green-500' />
                               </div>
                               <div className='text-[5px] text-gray-400'>
                                 Settlements
@@ -545,7 +545,7 @@ export default function StepsSection() {
                             </div>
                             <div className='bg-white rounded p-1.5 border border-orange-100'>
                               <div className='w-3 h-3 rounded bg-gray-100 flex items-center justify-center mb-0.5'>
-                                <span className='text-[6px]'>👤</span>
+                                <User className='w-1.5 h-1.5 text-blue-500' />
                               </div>
                               <div className='text-[5px] text-gray-400'>
                                 Customers
@@ -612,7 +612,7 @@ export default function StepsSection() {
                                 className='bg-orange-50 rounded p-1 border border-orange-100'
                               >
                                 <div className='flex items-start gap-0.5'>
-                                  <span className='text-[6px]'>🔔</span>
+                                  <Bell className='w-2 h-2 text-orange-400 mt-0.5 shrink-0' />
                                   <div className='flex-1'>
                                     <p className='text-[5px] font-medium text-gray-800 leading-tight'>
                                       Payment received

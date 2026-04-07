@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import DashboardMockup from '@/app/home/_components/DashboardMockup';
+import { Landmark, ShieldCheck, Lock } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -142,13 +143,16 @@ export default function HeroSection() {
         {/* Compliance badges */}
         <div className='mt-10 flex items-center justify-center gap-8 flex-wrap'>
           <div className='flex items-center gap-2 text-sm font-medium text-gray-600'>
-            <span className='text-2xl'>🏛️</span>CBN Licensed
+            <Landmark className='w-6 h-6 text-orange-500' />
+            CBN Licensed
           </div>
           <div className='flex items-center gap-2 text-sm font-medium text-gray-600'>
-            <span className='text-2xl'>🛡️</span>NDPR
+            <ShieldCheck className='w-6 h-6 text-green-500' />
+            NDPR
           </div>
           <div className='flex items-center gap-2 text-sm font-medium text-gray-600'>
-            <span className='text-2xl'>🔒</span>PCI/DSS
+            <Lock className='w-6 h-6 text-blue-500' />
+            PCI/DSS
           </div>
         </div>
       </div>

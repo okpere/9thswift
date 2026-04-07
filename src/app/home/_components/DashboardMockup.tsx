@@ -1,5 +1,19 @@
 'use client';
 
+import Logo from '@/app/_components/Logo';
+import {
+  LayoutDashboard,
+  BarChart3,
+  Users,
+  Wallet,
+  Bell,
+  FileText,
+  TrendingUp,
+  Download,
+  User,
+  Calendar,
+} from 'lucide-react';
+
 const notifications = [
   { text: 'Credit payment notification', time: 'Just now' },
   { text: 'Credit payment notification', time: 'Just now' },
@@ -133,7 +147,7 @@ export default function DashboardMockup() {
           }
         }
       `}</style>
-      <div className="py-12 px-8 bg-white rounded-xl">
+      <div className='py-12 px-8 bg-white rounded-xl'>
         <div
           className='rounded-2xl overflow-hidden shadow-2xl bg-[#ffe8d7] shadow-orange-200 border border-orange-100'
           style={{
@@ -150,16 +164,14 @@ export default function DashboardMockup() {
             >
               {/* Logo */}
               <div
-                className='flex items-center gap-2 mb-5'
+                className='mb-5'
                 style={{ animation: 'fadeInUp 0.8s ease-out 0.2s both' }}
               >
-                <svg width='28' height='28' viewBox='0 0 32 32' fill='none'>
-                  <path d='M8 28 L16 4 L24 16 L16 20 Z' fill='#F97316' />
-                  <path d='M8 28 L16 20 L12 28 Z' fill='#DC2626' />
-                </svg>
-                <span className='font-bold text-gray-900 text-sm'>
-                  <span className='font-black'>9th</span> Swift
-                </span>
+                <Logo
+                  width={16}
+                  height={16}
+                  textClassName='font-bold text-gray-900 text-sm'
+                />
               </div>
 
               {/* OVERVIEW */}
@@ -173,7 +185,7 @@ export default function DashboardMockup() {
                 className='flex items-center gap-2 px-3 py-2 rounded-lg bg-orange-500 text-white text-xs font-semibold mb-2'
                 style={{ animation: 'fadeInUp 0.6s ease-out 0.4s both' }}
               >
-                <span>⊞</span>
+                <LayoutDashboard className='w-3.5 h-3.5' />
                 Dashboard
               </div>
 
@@ -188,9 +200,12 @@ export default function DashboardMockup() {
                 <span className='text-gray-300 text-xs'>∧</span>
               </div>
               {[
-                { icon: '📊', label: 'Transaction' },
-                { icon: '👥', label: 'Customers' },
-                { icon: '💳', label: 'Wallet' },
+                {
+                  icon: <BarChart3 className='w-3.5 h-3.5' />,
+                  label: 'Transaction',
+                },
+                { icon: <Users className='w-3.5 h-3.5' />, label: 'Customers' },
+                { icon: <Wallet className='w-3.5 h-3.5' />, label: 'Wallet' },
               ].map((item, index) => (
                 <div
                   key={item.label}
@@ -199,7 +214,7 @@ export default function DashboardMockup() {
                     animation: `fadeInUp 0.6s ease-out ${0.6 + index * 0.1}s both`,
                   }}
                 >
-                  <span className='text-sm'>{item.icon}</span>
+                  {item.icon}
                   {item.label}
                 </div>
               ))}
@@ -235,7 +250,7 @@ export default function DashboardMockup() {
               {/* Top header */}
               <div className='flex items-center justify-end gap-3 px-5 py-3 bg-white border-b border-orange-100'>
                 <div className='relative'>
-                  <span className='text-lg'>🔔</span>
+                  <Bell className='w-5 h-5 text-gray-600' />
                   <span className='absolute -top-0.5 -right-0.5 w-2 h-2 bg-orange-400 rounded-full animate-pulse' />
                 </div>
                 <div className='w-8 h-8 rounded-full bg-orange-200 overflow-hidden flex items-center justify-center text-xs font-bold text-orange-600'>
@@ -261,7 +276,7 @@ export default function DashboardMockup() {
                     }}
                   >
                     <div className='flex items-center gap-2'>
-                      <span className='text-orange-400 text-sm'>📋</span>
+                      <FileText className='w-4 h-4 text-orange-400' />
                       <span className='text-sm font-semibold text-gray-800'>
                         Overview
                       </span>
@@ -274,7 +289,7 @@ export default function DashboardMockup() {
                         Sort <span>⌄</span>
                       </button>
                       <button className='text-[10px] text-gray-500 border border-gray-200 rounded-lg px-2.5 py-1 bg-white flex items-center gap-1'>
-                        🗓 Filter
+                        <Calendar className='w-3 h-3' /> Filter
                       </button>
                     </div>
                   </div>
@@ -283,16 +298,22 @@ export default function DashboardMockup() {
                   <div className='grid grid-cols-3 gap-3'>
                     {[
                       {
-                        icon: '📶',
+                        icon: (
+                          <TrendingUp className='w-4 h-4 text-orange-500' />
+                        ),
                         label: 'Total Transaction',
                         value: '₦23,450,000.00',
                       },
                       {
-                        icon: '📥',
+                        icon: <Download className='w-4 h-4 text-green-500' />,
                         label: 'Settlements',
                         value: '₦23,100,000.00',
                       },
-                      { icon: '👤', label: 'Customers', value: '7,890' },
+                      {
+                        icon: <Users className='w-4 h-4 text-blue-500' />,
+                        label: 'Customers',
+                        value: '7,890',
+                      },
                     ].map((m, index) => (
                       <div
                         key={m.label}
@@ -301,7 +322,7 @@ export default function DashboardMockup() {
                           animation: `slideInUp 0.6s ease-out ${0.5 + index * 0.15}s both, float ${4 + index}s ease-in-out infinite ${2 + index * 0.5}s`,
                         }}
                       >
-                        <div className='w-7 h-7 rounded-lg bg-gray-100 flex items-center justify-center text-sm'>
+                        <div className='w-7 h-7 rounded-lg bg-gray-100 flex items-center justify-center'>
                           {m.icon}
                         </div>
                         <p className='text-[10px] text-gray-400'>{m.label}</p>
@@ -480,9 +501,7 @@ export default function DashboardMockup() {
                           animation: `notificationSlide 0.6s ease-out ${0.6 + i * 0.1}s both`,
                         }}
                       >
-                        <span className='text-orange-300 text-xs mt-0.5'>
-                          🔔
-                        </span>
+                        <Bell className='w-3 h-3 text-orange-400 mt-0.5 shrink-0' />
                         <div>
                           <p className='text-[10px] font-medium text-gray-700 leading-tight'>
                             {n.text}
