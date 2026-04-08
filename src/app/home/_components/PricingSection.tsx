@@ -105,7 +105,7 @@ export default function PricingSection() {
   }, [amount, mode]);
 
   return (
-    <section className='bg-[radial-gradient(circle_at_top,rgba(255,144,69,0.12),transparent_28%),linear-gradient(180deg,#171513_0%,#11100f_100%)] px-4 py-20 text-white sm:px-6 lg:px-8'>
+    <section id='pricing' className='bg-[radial-gradient(circle_at_top,rgba(255,144,69,0.12),transparent_28%),linear-gradient(180deg,#171513_0%,#11100f_100%)] px-4 py-20 text-white sm:px-6 lg:px-8'>
       <div className='mx-auto max-w-6xl  px-6 py-14  sm:px-8 lg:px-12'>
         <div className='mx-auto max-w-3xl text-center'>
           <h2 className='mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl'>

@@ -10,7 +10,7 @@ export default function AboutPage() {
       <AboutUs />
       <OurStory />
       <MissionVision />
-      <Team />
+      {/* <Team /> */}
       <CTA />
     </main>
   );

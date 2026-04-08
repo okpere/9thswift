@@ -127,13 +127,13 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
           <Link
-            href='/get-started'
+            href='https://app.9thswift.com/register'
             className='bg-orange-400 hover:bg-orange-500 text-white font-semibold px-8 py-4 rounded-xl text-base transition-colors w-full sm:w-auto'
           >
             Get Started
           </Link>
           <Link
-            href='/how-it-works'
+            href='#pricing'
             className='border border-gray-300 hover:border-gray-400 text-gray-800 font-semibold px-8 py-4 rounded-xl text-base transition-colors w-full sm:w-auto'
           >
             See how it works

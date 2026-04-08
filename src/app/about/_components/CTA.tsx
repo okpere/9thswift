@@ -27,9 +27,12 @@ const CTA = () => {
           </a>
 
           {/* Secondary Button */}
-          <button className='px-8 py-4 bg-transparent border-2 border-gray-600 text-white font-semibold rounded-full hover:bg-gray-800 hover:border-gray-500 transition-all duration-300'>
+          <a  
+            href='/faq#contactForm'
+            className='px-8 py-4 bg-transparent border-2 border-gray-600 text-white font-semibold rounded-full hover:bg-gray-800 hover:border-gray-500 transition-all duration-300'
+          >
             Talk to sales
-          </button>
+          </a>
         </div>
       </div>
     </div>

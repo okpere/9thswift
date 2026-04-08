@@ -25,7 +25,7 @@ export default function Footer() {
             <ul className='space-y-3 text-sm'>
               <li>
                 <Link
-                  href='/payments'
+                  href='/developer'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
                   Payments
@@ -33,7 +33,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/checkout'
+                  href='/developer'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
                   Checkout
@@ -41,7 +41,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/payment-links'
+                  href='/developer'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
                   Payment Links
@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/api'
+                  href='/developer'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
                   API
@@ -57,7 +57,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/pricing'
+                  href='/developer'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
                   Pricing
@@ -87,7 +87,7 @@ export default function Footer() {
               </li> */}
               <li>
                 <Link
-                  href='/contact'
+                  href='/faq#contactForm'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
                   Contact
