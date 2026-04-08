@@ -1,42 +1,40 @@
-import { ArrowRight, Link } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
-const CTA = () => {
+export default function CTASection() {
   return (
-    <div className='relative mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900'>
-      <div className='max-w-5xl mx-auto text-center'>
-        {/* Heading */}
-        <h2 className='text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight'>
+    <section className='relative overflow-hidden bg-[#0f0f0f] py-40 sm:py-20'>
+      <div
+        className='pointer-events-none absolute inset-0'
+        style={{
+          background:
+            'radial-gradient(600px 300px at 30% 80%, rgba(249,115,22,0.35), transparent 70%), radial-gradient(400px 240px at 70% 65%, rgba(249,115,22,0.2), transparent 70%)',
+        }}
+      />
+      <div className='relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8'>
+        <h2 className='text-3xl sm:text-5xl font-extrabold text-white leading-tight'>
           Stop leaving money on the table.
         </h2>
-
-        {/* Subtitle */}
-        <p className='text-gray-300 text-lg lg:text-xl max-w-3xl mx-auto mb-10 leading-relaxed'>
+        <p className='mt-4 text-sm sm:text-base text-gray-300 leading-relaxed'>
           Capture every payment efficiently and grow your business with
           confidence. Start accepting payments today.
         </p>
-
-        {/* Buttons */}
-        <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-          {/* Primary CTA Button */}
-          <a
+        <div className='mt-8 flex flex-col sm:flex-row items-center justify-center gap-4'>
+          <Link
             href='https://app.9thswift.com/register'
             className='inline-flex items-center justify-center gap-2 rounded-xl bg-orange-400 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-colors hover:bg-orange-500 w-full sm:w-auto'
           >
             Create your free account
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
-          </a>
-
-          {/* Secondary Button */}
-          <a  
+          </Link>
+          <Link
             href='/faq#contactForm'
-            className='px-8 py-4 bg-transparent border-2 border-gray-600 text-white font-semibold rounded-full hover:bg-gray-800 hover:border-gray-500 transition-all duration-300'
+            className='inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-8 py-4 text-sm font-semibold text-white/90 backdrop-blur transition-colors hover:border-white/25 hover:bg-white/10 w-full sm:w-auto'
           >
             Talk to sales
-          </a>
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default CTA;
+}

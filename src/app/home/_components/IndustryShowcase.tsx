@@ -15,7 +15,7 @@ const industries: Industry[] = [
     description:
       'Collect taxes, fees, and fines with secure payment flows designed for public sector needs.',
     imageUrl:
-      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566302/Frame_2147226087_ajl8s9.svg',
+      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775651755/Frame_2147226173_1_pihdhd.svg',
     tags: ['Government', 'Public Sector'],
   },
 

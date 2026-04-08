@@ -147,7 +147,7 @@ export default function DashboardMockup() {
           }
         }
       `}</style>
-      <div className='py-6 px-4 sm:py-12 sm:px-8 bg-white rounded-xl'>
+      <div className='py-6 px-2 sm:py-12 sm:px-8 bg-white rounded-xl'>
         <div
           className='rounded-2xl overflow-hidden shadow-2xl bg-[#ffe8d7] shadow-orange-200 border border-orange-100'
           style={{
