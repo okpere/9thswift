@@ -147,12 +147,12 @@ export default function PricingSection() {
               ))}
             </div>
 
-            <button
-              type='button'
+            <a
+              href='https://app.9thswift.com/register'
               className='mt-6 inline-flex w-full items-center justify-center rounded-xl bg-orange-400 px-5 py-4 text-sm font-semibold text-slate-950 transition-colors hover:bg-orange-300'
             >
               Get Started for free
-            </button>
+            </a>
           </div>
 
           <div className='rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))] p-7 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]'>

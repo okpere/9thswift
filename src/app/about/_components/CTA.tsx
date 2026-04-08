@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Link } from 'lucide-react';
 
 const CTA = () => {
   return (
@@ -18,10 +18,13 @@ const CTA = () => {
         {/* Buttons */}
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
           {/* Primary CTA Button */}
-          <button className='group relative px-8 py-4 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-orange-500/50 transition-all duration-300 flex items-center gap-2'>
+          <a
+            href='https://app.9thswift.com/register'
+            className='inline-flex items-center justify-center gap-2 rounded-xl bg-orange-400 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-colors hover:bg-orange-500 w-full sm:w-auto'
+          >
             Create your free account
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-          </button>
+            <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+          </a>
 
           {/* Secondary Button */}
           <button className='px-8 py-4 bg-transparent border-2 border-gray-600 text-white font-semibold rounded-full hover:bg-gray-800 hover:border-gray-500 transition-all duration-300'>

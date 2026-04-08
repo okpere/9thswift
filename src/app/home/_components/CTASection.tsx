@@ -21,7 +21,7 @@ export default function CTASection() {
         </p>
         <div className='mt-8 flex flex-col sm:flex-row items-center justify-center gap-4'>
           <Link
-            href='/get-started'
+            href='https://app.9thswift.com/register'
             className='inline-flex items-center justify-center gap-2 rounded-xl bg-orange-400 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(249,115,22,0.35)] transition-colors hover:bg-orange-500 w-full sm:w-auto'
           >
             Create your free account

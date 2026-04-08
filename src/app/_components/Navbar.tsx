@@ -87,13 +87,13 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className='hidden md:flex items-center gap-4'>
           <Link
-            href='/login'
+            href='https://app.9thswift.com/login'
             className='text-sm font-medium text-orange-500 hover:text-orange-600 transition-colors'
           >
             Login
           </Link>
           <Link
-            href='/get-started'
+            href='https://app.9thswift.com/register'
             className='bg-orange-400 hover:bg-orange-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors'
           >
             Get Started
@@ -139,14 +139,14 @@ export default function Navbar() {
           </Link>
           <div className='border-t border-gray-100 pt-3 mt-3 flex flex-col gap-2'>
             <Link
-              href='/login'
+              href='https://app.9thswift.com/login'
               className='block px-4 py-2 text-sm font-medium text-orange-500'
               onClick={() => setMobileOpen(false)}
             >
               Login
             </Link>
             <Link
-              href='/get-started'
+              href='https://app.9thswift.com/register'
               className='block text-center bg-orange-400 hover:bg-orange-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg'
               onClick={() => setMobileOpen(false)}
             >

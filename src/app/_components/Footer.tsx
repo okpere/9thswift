@@ -84,14 +84,14 @@ export default function Footer() {
                   About us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href='/blog'
                   className='text-gray-600 hover:text-orange-500 transition-colors'
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href='/contact'
