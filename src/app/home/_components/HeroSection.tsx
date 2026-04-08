@@ -141,32 +141,35 @@ export default function HeroSection() {
         </div>
 
         {/* Compliance badges */}
-        <div className='mt-10 flex items-center justify-center gap-8 flex-wrap'>
-          <div className='flex items-center gap-2'>
+        <div className='mt-10 flex items-center justify-center gap-8 '>
+          <div className='flex flex-col items-center gap-1'>
             <Image
-              src='https://img.logo.dev/cbn.gov.ng?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+              src='/Babge/cbn.svg'
               alt='CBN Licensed'
-              width={80}
-              height={32}
-              className='h-8 w-auto object-contain mix-blend-multiply'
+              width={56}
+              height={69}
+              className='h-12 w-auto object-contain'
             />
+            <span className='text-xs text-gray-600 font-medium font-sans'>
+              CBN licensed by partners
+            </span>
           </div>
           <div className='flex items-center gap-2'>
             <Image
-              src='https://img.logo.dev/ndpc.gov.ng?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
-              alt='NDPR Compliant'
-              width={80}
-              height={32}
-              className='h-8 w-auto object-contain mix-blend-multiply'
-            />
-          </div>
-          <div className='flex items-center gap-2'>
-            <Image
-              src='https://img.logo.dev/pcisecuritystandards.org?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+              src='/Babge/pcidss.svg'
               alt='PCI DSS Certified'
-              width={80}
-              height={32}
-              className='h-8 w-auto object-contain mix-blend-multiply'
+              width={120}
+              height={120}
+              className='h-28 w-auto object-contain mix-blend-multiply'
+            />
+          </div>
+          <div className='flex items-center gap-2'>
+            <Image
+              src='/Babge/ndpr.svg'
+              alt='NDPR Compliant'
+              width={56}
+              height={69}
+              className='h-28 w-auto object-contain'
             />
           </div>
         </div>

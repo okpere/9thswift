@@ -209,13 +209,18 @@ export default function Footer() {
                 height={32}
                 className='h-8 w-auto object-contain mix-blend-multiply'
               />
-              <Image
-                src='https://img.logo.dev/pcisecuritystandards.org?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
-                alt='PCI DSS Certified'
-                width={64}
-                height={32}
-                className='h-8 w-auto object-contain mix-blend-multiply'
-              />
+              <div className='flex flex-col items-center gap-1'>
+                <Image
+                  src='/Babge/cbn.svg'
+                  alt='CBN Licensed'
+                  width={56}
+                  height={69}
+                  className='h-10 w-auto object-contain'
+                />
+                <span className='text-xs text-gray-500 font-sans'>
+                  CBN licensed by partners
+                </span>
+              </div>
             </div>
           </div>
           <p className='text-xs text-gray-500 text-center lg:text-left leading-relaxed max-w-4xl'>

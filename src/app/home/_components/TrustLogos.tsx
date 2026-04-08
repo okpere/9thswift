@@ -89,18 +89,26 @@ function LogoColorful() {
   );
 }
 
+function LogoMicaimiah() {
+  return (
+    <div className='flex items-center gap-2'>
+      <img
+        src='https://img.logo.dev/micaimiah.com?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+        alt='Micaimiah'
+        className='h-20 w-auto object-contain'
+      />
+    </div>
+  );
+}
+
 const trustLogos = [
-  { component: <LogoTriangle />, key: 'triangle1' },
-  { component: <LogoDots />, key: 'dots' },
-  { component: <LogoTriangleAlt />, key: 'triangle2' },
-  { component: <LogoCross />, key: 'cross' },
-  { component: <LogoColorful />, key: 'colorful' },
+  { component: <LogoMicaimiah />, key: 'micaimiah' },
 ];
 const TrustLogos = () => {
   return (
     <div className='relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center bg-white'>
       <p className='text-gray-500 text-sm mb-8'>
-        We are trusted by 1000+ businesses
+        We are trusted
       </p>
       <div className='flex items-center justify-center gap-8 sm:gap-12 flex-wrap'>
         {trustLogos.map((logo) => (

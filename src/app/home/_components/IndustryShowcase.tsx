@@ -11,12 +11,21 @@ type Industry = {
 
 const industries: Industry[] = [
   {
+    title: 'Government & Public Sector',
+    description:
+      'Collect taxes, fees, and fines with secure payment flows designed for public sector needs.',
+    imageUrl:
+      'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566302/Frame_2147226087_ajl8s9.svg',
+    tags: ['Government', 'Public Sector'],
+  },
+
+  {
     title: 'SMEs',
     description:
       'Accept walk-in, online, and invoice payments without changing how you already sell.',
     imageUrl:
       'https://res.cloudinary.com/dougwnqok/image/upload/q_auto/f_auto/v1775566308/Frame_2147226083_cmredn.svg',
-    tags: ['Online Store', 'Online Store'],
+    tags: ['SMEs', 'Small Business'],
   },
   {
     title: 'Ecommerce',
@@ -161,8 +170,9 @@ export default function IndustryShowcase() {
             Built for every industry
           </h2>
           <p className='mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-500'>
-            Whether you run a school, a logistics company, or a tech startup,
-            9th Swift is built for how you actually do business.
+            Whether you’re a government enterprise or you run a school, a
+            logistics company, or a tech startup, 9th Swift is built for how you
+            actually do business.
           </p>
         </div>
 
