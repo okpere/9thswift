@@ -147,7 +147,7 @@ export default function DashboardMockup() {
           }
         }
       `}</style>
-      <div className='py-12 px-8 bg-white rounded-xl'>
+      <div className='py-6 px-4 sm:py-12 sm:px-8 bg-white rounded-xl'>
         <div
           className='rounded-2xl overflow-hidden shadow-2xl bg-[#ffe8d7] shadow-orange-200 border border-orange-100'
           style={{
@@ -156,10 +156,10 @@ export default function DashboardMockup() {
               'slideInDashboard 1.2s ease-out, float 6s ease-in-out infinite 2s, glow 4s ease-in-out infinite 3s',
           }}
         >
-          <div className='flex h-[520px] '>
+          <div className='flex h-[400px] sm:h-[520px]'>
             {/* ── Sidebar ── */}
             <aside
-              className='w-52 shrink-0  border-r bg-[#ffe8d7] border-orange-100 flex flex-col p-4 gap-1 overflow-hidden'
+              className='hidden lg:flex w-52 shrink-0 border-r bg-[#ffe8d7] border-orange-100 flex-col p-4 gap-1 overflow-hidden'
               style={{ animation: 'slideInLeft 0.6s ease-out' }}
             >
               {/* Logo */}
@@ -248,15 +248,15 @@ export default function DashboardMockup() {
               style={{ animation: 'fadeInUp 0.8s ease-out 0.3s both' }}
             >
               {/* Top header */}
-              <div className='flex items-center justify-end gap-3 px-5 py-3 bg-white border-b border-orange-100'>
+              <div className='flex items-center justify-end gap-2 sm:gap-3 px-3 sm:px-5 py-2 sm:py-3 bg-white border-b border-orange-100'>
                 <div className='relative'>
-                  <Bell className='w-5 h-5 text-gray-600' />
+                  <Bell className='w-4 h-4 sm:w-5 sm:h-5 text-gray-600' />
                   <span className='absolute -top-0.5 -right-0.5 w-2 h-2 bg-orange-400 rounded-full animate-pulse' />
                 </div>
-                <div className='w-8 h-8 rounded-full bg-orange-200 overflow-hidden flex items-center justify-center text-xs font-bold text-orange-600'>
+                <div className='w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-orange-200 overflow-hidden flex items-center justify-center text-[10px] sm:text-xs font-bold text-orange-600'>
                   SM
                 </div>
-                <div className='leading-tight'>
+                <div className='leading-tight hidden sm:block'>
                   <p className='text-xs font-semibold text-gray-800'>
                     Sharafadeen M.
                   </p>
@@ -267,35 +267,36 @@ export default function DashboardMockup() {
               {/* Content area */}
               <div className='flex flex-1 overflow-hidden bg-[#FFF8F5]'>
                 {/* Center */}
-                <div className='flex-1 p-4 overflow-hidden flex flex-col gap-3'>
+                <div className='flex-1 p-2 sm:p-4 overflow-hidden flex flex-col gap-2 sm:gap-3'>
                   {/* Overview bar */}
                   <div
-                    className='flex items-center justify-between bg-white rounded-xl px-4 py-2.5 border border-orange-100'
+                    className='flex items-center justify-between bg-white rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 border border-orange-100'
                     style={{
                       animation: 'slideInRight 0.6s ease-out 0.4s both',
                     }}
                   >
-                    <div className='flex items-center gap-2'>
-                      <FileText className='w-4 h-4 text-orange-400' />
-                      <span className='text-sm font-semibold text-gray-800'>
+                    <div className='flex items-center gap-1.5 sm:gap-2'>
+                      <FileText className='w-3 h-3 sm:w-4 sm:h-4 text-orange-400' />
+                      <span className='text-xs sm:text-sm font-semibold text-gray-800'>
                         Overview
                       </span>
                     </div>
-                    <div className='flex items-center gap-2'>
-                      <button className='text-[10px] text-gray-500 border border-gray-200 rounded-lg px-2.5 py-1 bg-white'>
+                    <div className='flex items-center gap-1 sm:gap-2'>
+                      <button className='hidden sm:block text-[10px] text-gray-500 border border-gray-200 rounded-lg px-2.5 py-1 bg-white'>
                         Export PDF
                       </button>
-                      <button className='text-[10px] text-gray-500 border border-gray-200 rounded-lg px-2.5 py-1 bg-white flex items-center gap-1'>
+                      <button className='text-[9px] sm:text-[10px] text-gray-500 border border-gray-200 rounded-lg px-1.5 sm:px-2.5 py-1 bg-white flex items-center gap-0.5 sm:gap-1'>
                         Sort <span>⌄</span>
                       </button>
-                      <button className='text-[10px] text-gray-500 border border-gray-200 rounded-lg px-2.5 py-1 bg-white flex items-center gap-1'>
-                        <Calendar className='w-3 h-3' /> Filter
+                      <button className='text-[9px] sm:text-[10px] text-gray-500 border border-gray-200 rounded-lg px-1.5 sm:px-2.5 py-1 bg-white flex items-center gap-0.5 sm:gap-1'>
+                        <Calendar className='w-2.5 h-2.5 sm:w-3 sm:h-3' />{' '}
+                        Filter
                       </button>
                     </div>
                   </div>
 
                   {/* Metric cards */}
-                  <div className='grid grid-cols-3 gap-3'>
+                  <div className='grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3'>
                     {[
                       {
                         icon: (
@@ -317,16 +318,18 @@ export default function DashboardMockup() {
                     ].map((m, index) => (
                       <div
                         key={m.label}
-                        className='bg-white rounded-xl p-3 border border-orange-100 flex flex-col gap-2'
+                        className='bg-white rounded-xl p-2 sm:p-3 border border-orange-100 flex flex-col gap-1.5 sm:gap-2'
                         style={{
                           animation: `slideInUp 0.6s ease-out ${0.5 + index * 0.15}s both, float ${4 + index}s ease-in-out infinite ${2 + index * 0.5}s`,
                         }}
                       >
-                        <div className='w-7 h-7 rounded-lg bg-gray-100 flex items-center justify-center'>
+                        <div className='w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-gray-100 flex items-center justify-center'>
                           {m.icon}
                         </div>
-                        <p className='text-[10px] text-gray-400'>{m.label}</p>
-                        <p className='text-sm font-extrabold text-gray-900'>
+                        <p className='text-[9px] sm:text-[10px] text-gray-400'>
+                          {m.label}
+                        </p>
+                        <p className='text-xs sm:text-sm font-extrabold text-gray-900'>
                           {m.value}
                         </p>
                       </div>
@@ -335,36 +338,38 @@ export default function DashboardMockup() {
 
                   {/* Chart */}
                   <div
-                    className='bg-white rounded-xl border border-orange-100 p-3 flex-1'
+                    className='bg-white rounded-xl border border-orange-100 p-2 sm:p-3 flex-1'
                     style={{ animation: 'slideInUp 0.8s ease-out 0.8s both' }}
                   >
-                    <div className='flex items-center gap-3 mb-2 flex-wrap'>
-                      <span className='text-xs font-bold text-gray-800'>
+                    <div className='flex items-center gap-1.5 sm:gap-3 mb-2 flex-wrap'>
+                      <span className='text-[10px] sm:text-xs font-bold text-gray-800'>
                         Transaction Trend
                       </span>
-                      <span className='text-[10px] text-gray-400'>
+                      <span className='hidden sm:inline text-[10px] text-gray-400'>
                         Total Inflow
                       </span>
-                      <span className='text-[10px] text-gray-400'>
+                      <span className='hidden sm:inline text-[10px] text-gray-400'>
                         Settlement Status
                       </span>
-                      <span className='mx-1 text-gray-200'>|</span>
-                      <span className='flex items-center gap-1 text-[10px] text-gray-500'>
+                      <span className='hidden sm:inline mx-1 text-gray-200'>
+                        |
+                      </span>
+                      <span className='flex items-center gap-1 text-[9px] sm:text-[10px] text-gray-500'>
                         <span
-                          className='w-2 h-2 rounded-full bg-orange-400 inline-block'
+                          className='w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-orange-400 inline-block'
                           style={{ animation: 'glow 2s ease-in-out infinite' }}
                         />
                         This year
                       </span>
-                      <span className='flex items-center gap-1 text-[10px] text-gray-400'>
-                        <span className='w-2 h-2 rounded-full bg-blue-300 inline-block' />
+                      <span className='flex items-center gap-1 text-[9px] sm:text-[10px] text-gray-400'>
+                        <span className='w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-blue-300 inline-block' />
                         Last year
                       </span>
                     </div>
 
                     <svg
                       viewBox='0 0 320 100'
-                      className='w-full h-28'
+                      className='w-full h-20 sm:h-28'
                       preserveAspectRatio='none'
                       style={{ animation: 'growChart 1.5s ease-out 1s both' }}
                     >
@@ -472,7 +477,7 @@ export default function DashboardMockup() {
                     </svg>
 
                     {/* X-axis */}
-                    <div className='flex justify-between text-[9px] text-gray-300 px-1 mt-1'>
+                    <div className='flex justify-between text-[8px] sm:text-[9px] text-gray-300 px-1 mt-1'>
                       {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'].map(
                         (m) => (
                           <span key={m}>{m}</span>
@@ -484,10 +489,10 @@ export default function DashboardMockup() {
 
                 {/* ── Notifications panel ── */}
                 <div
-                  className='w-52 bg-white border-l border-orange-100 flex flex-col overflow-hidden mt-2 rounded-t-sm'
+                  className='hidden lg:flex w-52 bg-white border-l border-orange-100 flex-col overflow-hidden mt-2 rounded-t-sm'
                   style={{ animation: 'slideInRight 0.8s ease-out 0.4s both' }}
                 >
-                  <div className='p-3 border-b  border-orange-50'>
+                  <div className='p-3 border-b border-orange-50'>
                     <p className='text-xs font-bold text-gray-800'>
                       Notifications
                     </p>
