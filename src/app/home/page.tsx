@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <TrustLogos />
+      {/* <TrustLogos /> */}
       <PaymentFeatures />
       <FeaturesSection />
       <IndustryShowcase />

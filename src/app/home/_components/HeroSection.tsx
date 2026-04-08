@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import DashboardMockup from '@/app/home/_components/DashboardMockup';
-import { Landmark, ShieldCheck, Lock } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -142,17 +142,32 @@ export default function HeroSection() {
 
         {/* Compliance badges */}
         <div className='mt-10 flex items-center justify-center gap-8 flex-wrap'>
-          <div className='flex items-center gap-2 text-sm font-medium text-gray-600'>
-            <Landmark className='w-6 h-6 text-orange-500' />
-            CBN Licensed
+          <div className='flex items-center gap-2'>
+            <Image
+              src='https://img.logo.dev/cbn.gov.ng?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+              alt='CBN Licensed'
+              width={80}
+              height={32}
+              className='h-8 w-auto object-contain mix-blend-multiply'
+            />
           </div>
-          <div className='flex items-center gap-2 text-sm font-medium text-gray-600'>
-            <ShieldCheck className='w-6 h-6 text-green-500' />
-            NDPR
+          <div className='flex items-center gap-2'>
+            <Image
+              src='https://img.logo.dev/ndpc.gov.ng?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+              alt='NDPR Compliant'
+              width={80}
+              height={32}
+              className='h-8 w-auto object-contain mix-blend-multiply'
+            />
           </div>
-          <div className='flex items-center gap-2 text-sm font-medium text-gray-600'>
-            <Lock className='w-6 h-6 text-blue-500' />
-            PCI/DSS
+          <div className='flex items-center gap-2'>
+            <Image
+              src='https://img.logo.dev/pcisecuritystandards.org?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+              alt='PCI DSS Certified'
+              width={80}
+              height={32}
+              className='h-8 w-auto object-contain mix-blend-multiply'
+            />
           </div>
         </div>
       </div>

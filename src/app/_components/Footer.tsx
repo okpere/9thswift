@@ -1,13 +1,6 @@
 import Link from 'next/link';
-import {
-  BriefcaseBusiness,
-  Camera,
-  Landmark,
-  Music2,
-  Shield,
-  ShieldCheck,
-  Users,
-} from 'lucide-react';
+import Image from 'next/image';
+import { BriefcaseBusiness, Camera, Music2, Users } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Footer() {
@@ -202,24 +195,27 @@ export default function Footer() {
               © 2026 9th Tech Ltd. All rights reserved.
             </p>
             <div className='flex items-center gap-6 flex-wrap justify-center'>
-              <div className='flex items-center gap-2 text-sm font-medium text-gray-700'>
-                <span className='inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-50 text-orange-500'>
-                  <Landmark className='h-4 w-4' />
-                </span>
-                CBN Licensed
-              </div>
-              <div className='flex items-center gap-2 text-sm font-medium text-gray-700'>
-                <span className='inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-50 text-green-600'>
-                  <ShieldCheck className='h-4 w-4' />
-                </span>
-                NDPR
-              </div>
-              <div className='flex items-center gap-2 text-sm font-medium text-gray-700'>
-                <span className='inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-50 text-blue-600'>
-                  <Shield className='h-4 w-4' />
-                </span>
-                PCI DSS
-              </div>
+              <Image
+                src='https://img.logo.dev/cbn.gov.ng?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+                alt='CBN Licensed'
+                width={64}
+                height={32}
+                className='h-8 w-auto object-contain mix-blend-multiply'
+              />
+              <Image
+                src='https://img.logo.dev/ndpc.gov.ng?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+                alt='NDPR Compliant'
+                width={64}
+                height={32}
+                className='h-8 w-auto object-contain mix-blend-multiply'
+              />
+              <Image
+                src='https://img.logo.dev/pcisecuritystandards.org?token=pk_Gn-mh45nQCaklVB7ZGfTzw&retina=true'
+                alt='PCI DSS Certified'
+                width={64}
+                height={32}
+                className='h-8 w-auto object-contain mix-blend-multiply'
+              />
             </div>
           </div>
           <p className='text-xs text-gray-500 text-center lg:text-left leading-relaxed max-w-4xl'>
