@@ -6,7 +6,7 @@ export default function DeveloperPage() {
   return (
     <main className='min-h-screen bg-white overflow-x-hidden'>
       <DocumentationHeader />
-      {/* <QuickStartGuide /> */}
+      <QuickStartGuide />
       <DocumentationContent />
     </main>
   );
